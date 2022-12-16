@@ -7,6 +7,7 @@ import About from './Components/About';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Contact from './Components/Contact';
+import ForgotPasswordForm from './Components/ForgotPasswordForm'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route path="/about" element={<About/>} />
     <Route path="/contact" element={<Contact/>} />
     <Route path="/login" element={<Login/>} />
+    <Route path='/login/forgot_password' element={<ForgotPasswordForm/>}/>
     <Route path="/sign_up" element={<Signup/>} />
   </Routes>
   </>
