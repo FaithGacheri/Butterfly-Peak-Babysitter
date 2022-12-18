@@ -44,10 +44,16 @@ export default function NavBar() {
                     About Us
                   </Link>
                   <Link
-                    to="/Contact Us"
+                    to="/contact_us"
                     className="text-base font-medium text-white hover:text-gray-300"
                   >
                     Contact Us
+                  </Link>
+                  <Link
+                    to="/blog"
+                    className="text-base font-medium text-white hover:text-gray-300"
+                  >
+                    Blog
                   </Link>
                 </div>
               </div>
@@ -112,10 +118,16 @@ export default function NavBar() {
                       About Us
                     </Link>
                     <Link
-                      to="/Contact Us"
+                      to="/contact_us"
                       className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
                     >
                       Contact Us
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                    >
+                      Blog
                     </Link>
                   </div>
                   <div className="mt-6 px-5">
