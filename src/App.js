@@ -11,7 +11,7 @@ import ForgotPasswordForm from './Components/ForgotPasswordForm'
 
 function App() {
   return (
-  <>
+  <div className="h-screen bg-gray-900">
   <NavBar/>
   <Routes>
     <Route path="/" element={<Home/>} />
@@ -21,7 +21,7 @@ function App() {
     <Route path='/login/forgot_password' element={<ForgotPasswordForm/>}/>
     <Route path="/sign_up" element={<Signup/>} />
   </Routes>
-  </>
+  </div>
   );
 }
 
