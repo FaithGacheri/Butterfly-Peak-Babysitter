@@ -4,7 +4,9 @@ import React from 'react'
 function Cards() {
   return (
     <div className="main-container">
-
+<div className="text">
+  
+</div>
     </div>
   )
 }
