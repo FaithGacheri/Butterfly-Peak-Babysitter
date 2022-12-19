@@ -12,7 +12,7 @@ import ForgotPasswordForm from './Components/ForgotPasswordForm'
 
 function App() {
   return (
-  <div className="h-screen bg-gray-900">
+  <div >
   <NavBar/>
   <Routes>
     <Route path="/" element={<Home/>} />
