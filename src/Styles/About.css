@@ -1,0 +1,47 @@
+body{
+    font-family: sans-serif;
+  }
+  
+  .g-about{
+    /* background-color: lightgray; */
+  }
+  
+  .about-us{
+    /* background-color: lightgray; */
+    display: flex;
+  }
+  
+  #g-h1{
+    /* text-align: center; */
+    color: #fff;
+  }
+  .g-par{
+    display: block;
+    /* background-color: red; */
+  }
+  #img1{
+    width: 70%;
+    /* right: 30%; */
+    border-radius:10% ;
+    height: 470px;
+    margin-right: 500px;
+  }
+  
+  #par{
+  /* background-color: lightgray; */
+  margin-right: 100px;
+  border-radius: 10%;
+  padding-top: 50px;
+  width: 60%;
+  margin-left: 50px;
+  color: #fff;
+  }
+  .about1{
+    display: flex;
+  }
+  #img2{
+    width: 40%;
+    /* right: 30%; */
+    border-radius:10% ;
+    margin-right: 0px;
+  }
