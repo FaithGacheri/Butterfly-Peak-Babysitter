@@ -5,14 +5,14 @@ export default function Testimonials() {
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-black text-center sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
           Testimonials
         </h1>
-        <p className="text-center mt-6 text-2xl font-medium text-black">
+        <p className="text-center mt-6 text-2xl font-medium text-black sm:text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
           nulla vitae laoreet augue.<br></br> Amet feugiat est integer dolor
           auctor adipiscing nunc urna, sit
         </p>
       </div>
 
-      <div className="bg-white m-auto mt-3.5 w-4/5 flex lg:py-24 grid grid-cols-3 grid-rows-auto gap-x-3.5 gap-y-3.5">
+      <div className="bg-white m-auto mt-3.5 w-4/5 lg:py-24 grid grid-cols-3 grid-rows-auto gap-x-3.5 gap-y-3.5 sm:text-center md:flex-row">
         <div className="bg-gradient-to-r from-teal-500 to-cyan-600 lg:relative lg:z-10 lg:pb-0 m-auto">
           <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
             <div className="relative lg:-my-8">
