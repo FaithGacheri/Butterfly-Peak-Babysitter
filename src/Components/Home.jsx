@@ -12,7 +12,7 @@ function Home() {
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
                   <div className="lg:py-24">
                     <Link
-                      to="/"
+                      to="/card-item"
                       className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                     >
                       <span className="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-5 py-0.5 text-sm font-semibold leading-5 text-white">
