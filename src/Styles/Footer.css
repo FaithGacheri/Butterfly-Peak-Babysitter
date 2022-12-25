@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Poppins&display=swap');
+
+.footer {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(254, 254, 254);
+  display:contents;
+  background-color: #01052e;
+  display:flex;
+  justify-content:space-evenly;
+  position:static;
+          left: 0px;
+          bottom: 0px;
+          right:5px;
+}
+
+.footer h2 {
+  font-weight:normal;
+}
+
+.footer-contact {
+   /* width: 80%;  */
+  display:list-item;
+}
+
+.footer-contact svg {
+  width: 30%;
+  border-radius: 30px;
+  padding: 0px;
+  font-size: 40px;
+  display: list-item;
+}
+
+.socials svg {
+  border-radius: 30px;
+  padding: 5px;
+  font-size: 60px;
+}
+
+.footer-contact svg:hover, .socials svg:hover{
+    cursor: pointer;
+    transition: ease-in-out .4s;
+    color: white;
+    flex-direction:column;
+}
+
+ .section3 {
+  width:0px;
+  text-align:center;
+  display:list-item;
+}
+
+ .section4 {
+    width: 5px;
+    text-align: center;
+    display: list-item;
+}
+
+.section5 {
+    width: 0px;
+    text-align: center;
+    display: list-item;
+}
