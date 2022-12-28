@@ -15,7 +15,7 @@ function Home() {
                       to="/card-item"
                       className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                     >
-                      <span className="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-5 py-0.5 text-sm font-semibold leading-5 text-white">
+                      <span className="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-5 py-0.5 text-sm font-semibold leading-10 text-white">
                         Looking for nanny?
                       </span>
                       <span className="ml-4 text-sm">
@@ -74,6 +74,11 @@ function Home() {
                           .
                         </p>
                       </form>
+                    </div>
+                    <div>
+                      <Link to="/card-item">
+                      <button className="flex justify-center w-1/2 rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 mt-12">Visit Babysitters page</button>
+                      </Link>
                     </div>
                   </div>
                 </div>

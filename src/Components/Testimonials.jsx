@@ -5,7 +5,7 @@ export default function Testimonials() {
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-black text-center sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
           Testimonials
         </h1>
-        <p className="text-center mt-6 text-2xl font-medium text-black sm:text-center">
+        <p className="text-center mt-6 text-2xl font-medium text-black sm:text-center sm:p-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
           nulla vitae laoreet augue.<br></br> Amet feugiat est integer dolor
           auctor adipiscing nunc urna, sit

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DateTime from "./DateTime";
 const caregiver = {
   name: "Naomi Small",
@@ -78,6 +78,11 @@ function classNames(...classes) {
 
 export default function CardItem() {
   const [clicked, setClicked] = useState(false);
+  const nav=useNavigate()
+  function handleSubmit(event) {
+    event.preventDefault();
+    nav('/checkout')
+  }
   return (
     <div className="bg-white">
       <main className="mx-auto mt-8 max-w-2xl px-4 pb-16 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8 border-r">
@@ -198,7 +203,7 @@ export default function CardItem() {
             {caregiver.status ? (
               <div>
                 {clicked ? (
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <>
                     <p className="text-lg text-sm font-medium text-red-600 lg:text-2xl pt-6 pb-6">Select the Date and Time</p>
                       <DateTime required/>

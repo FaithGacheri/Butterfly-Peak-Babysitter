@@ -1,5 +1,3 @@
-
-
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -18,12 +16,9 @@ export default function NavBar() {
               <div className="flex flex-1 items-center">
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link to="/about">
-                    <span className="sr-only">Logo</span>
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://cdn.logo.com/hotlink-ok/logo-social.png"
-                      alt=""
-                    />
+                    <h1 className="font-medium text-white hover:text-gray-300 lg:text-4xl md:text-2xl">
+                      Bb<span className="text-red-600">Care</span>
+                    </h1>
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
@@ -92,11 +87,9 @@ export default function NavBar() {
               <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://cdn.logo.com/hotlink-ok/logo-social.png"
-                      alt=""
-                    />
+                  <h1 className="font-medium text-black hover:text-gray-300 lg:text-4xl md:text-2xl">
+                      Bb<span className="text-red-600">Care</span>
+                    </h1>
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
