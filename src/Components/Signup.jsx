@@ -169,8 +169,8 @@ export default function Signup({onLogin}) {
             </form>
           </div>
           <div className="mt-10 flex items-center justify-center">
-            <p className="text-gray-700 sm:text-xl lg:text-4xl xl:text-xl">
-              To register as a Caregiver. Click <Link className="text-indigo-600 font-bold underline" to="">Here</Link>
+            <p className="text-gray-700 sm:text-xl md:text-xl lg:text-2xl">
+              To register as a Caregiver. Click <Link className="text-indigo-600 font-bold underline" to="/sign_up/caregiver">Here</Link>
             </p>
           </div>
         </div>
