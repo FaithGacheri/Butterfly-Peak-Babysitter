@@ -9,6 +9,7 @@ import Signup from './Components/Signup';
 import Blog from './Components/Blog'; 
 import Contact from './Components/Contact';
 import CardItem from  './Components/CardItem'
+import Checkout from './Components/Checkout';
 import ForgotPasswordForm from './Components/ForgotPasswordForm'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <Route path="/" element={<Home/>} />
     <Route exact path='/'>
       <Route exact path='/card-item' element={<CardItem/>}/>
+      <Route exact path='/checkout' element={<Checkout/>}/>
     </Route>
     <Route path="/about" element={<About/>} />
     <Route path="/blog" element={<Blog/>} />
