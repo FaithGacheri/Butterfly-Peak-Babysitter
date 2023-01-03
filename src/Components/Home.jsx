@@ -7,7 +7,7 @@ function Home() {
     <div>
          <main>
           <div className=" h-screen bg-gray-900 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
-            <div className="mx-auto max-w-7xl lg:px-8">
+            <div className="mx-auto w-4/5 lg:px-8">
               <div className="lg:grid lg:grid-cols-2 lg:gap-10">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
                   <div className="lg:py-24">

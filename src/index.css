@@ -15,6 +15,15 @@ code {
   height: 40px;
   padding:0px
 }
+#testimonial:hover{
+  transform: rotateX(45deg) rotateZ(-25deg);
+  transform-style: preserve-3d;
+  transition: .3s;
+  vertical-align: bottom;
+  filter: grayscale(50%);
+  transition: .3s;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

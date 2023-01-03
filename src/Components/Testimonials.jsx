@@ -12,8 +12,8 @@ export default function Testimonials() {
             auctor adipiscing nunc urna, sit
           </p>
         </div>
-        <div className="mx-auto lg:w-11/12 lg:grid lg:grid-cols-3 grid-rows-3 gap-x-3.5 row-gap-4.5 md:px-6 lg:px-0 md:gap-y-3.5">
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-600 py-12 px-4 sm:px-6 md:flex md:flex-col md:mb-10 md:py-16 md:pl-10 md:pr-10 lg:pr-16">
+        <div className="relative mx-auto lg:w-11/12 lg:grid lg:grid-cols-3 grid-rows-3 gap-x-3.5 row-gap-4.5 md:px-6 lg:px-0 md:gap-y-3.5 ">
+          <div id="testimonial" className="bg-gradient-to-r from-teal-500 to-cyan-600 py-12 px-4 sm:px-6 md:flex md:flex-col md:mb-10 md:py-16 md:pl-10 md:pr-10 lg:pr-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -58,7 +58,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 border-indigo-900 py-12 px-4 md:mb-10 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 border-indigo-900 py-12 px-4 md:mb-10 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -104,7 +104,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -150,7 +150,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -196,7 +196,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -242,7 +242,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial" className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
