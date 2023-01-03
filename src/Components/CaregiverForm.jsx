@@ -1,13 +1,46 @@
 import React from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import YearPicker from "react-year-picker";
 
 export default function CaregiverForm() {
   const [value, setValue] = React.useState("");
+  const [user_name, setUsername] = React.useState("");
+  const [about, setAbout] = React.useState("");
+  const [first_name, setFirstName] = React.useState("");
+  const [last_name, setLastName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [education, setEducation] = React.useState("");
+  const [experience, setExperience] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = React.useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    fetch("/signup/caregiver", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        first_name,
+        last_name,
+        about,
+        user_name,
+        email,
+        education,
+        experience,
+        value,
+        password,
+        password_confirmation: passwordConfirmation,
+      }),
+    });
+  }
   return (
     <div className=" w-2/3 m-auto mt-10 h-auto pb-20 ">
-      <form className="space-y-8 divide-y divide-gray-200">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-8 divide-y divide-gray-200"
+      >
         <div className="space-y-8 divide-y divide-gray-200">
           <div>
             <div>
@@ -30,11 +63,45 @@ export default function CaregiverForm() {
                 </label>
                 <div className="mt-1 flex rounded-md shadow-sm">
                   <input
+                    onChange={(e) => setUsername(e.target.value)}
                     type="text"
                     name="username"
                     id="username"
-                    autoComplete="username"
                     className="block w-2/3 min-w-0 flex-1 p-3 rounded border border-gray-400  sm:text-sm "
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-4">
+                <label
+                  htmlFor="password"
+                  className="block text-md font-medium text-gray-700 pb-3"
+                >
+                  password
+                </label>
+                <div className="mt-1 flex rounded-md shadow-sm">
+                  <input
+                    onChange={(e) => setPassword(e.target.value)}
+                    type="password"
+                    name="password"
+                    id="password"
+                    className="block w-1/4 min-w-0 flex-1 p-3 rounded border border-gray-400  sm:text-sm "
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-4">
+                <label
+                  htmlFor="confirm_password"
+                  className="block text-md font-medium text-gray-700 pb-3"
+                >
+                  Confirm Password
+                </label>
+                <div className="mt-1 flex rounded-md shadow-sm">
+                  <input
+                    onChange={(e) => setPasswordConfirmation(e.target.value)}
+                    type="password"
+                    name="password_confirmation"
+                    id="password_confirmation"
+                    className="block w-1/4 min-w-0 flex-1 p-3 rounded border border-gray-400  sm:text-sm "
                   />
                 </div>
               </div>
@@ -48,11 +115,12 @@ export default function CaregiverForm() {
                 </label>
                 <div className="mt-1">
                   <textarea
+                    onChange={(e) => setAbout(e.target.value)}
                     id="about"
                     name="about"
                     placeholder="Write about yourself here"
                     rows={4}
-                    className="block w-1/2 rounded-md border border-gray-400 shadow-sm sm:text-sm"
+                    className="block w-1/2 p-2 rounded-md border border-gray-400 shadow-sm sm:text-sm"
                     defaultValue={""}
                   />
                 </div>
@@ -153,6 +221,7 @@ export default function CaregiverForm() {
                 </label>
                 <div className="mt-1">
                   <input
+                    onChange={(e) => setFirstName(e.target.value)}
                     type="text"
                     name="first-name"
                     id="first-name"
@@ -172,6 +241,7 @@ export default function CaregiverForm() {
                 <div className="mt-1">
                   <input
                     type="text"
+                    onChange={(e) => setLastName(e.target.value)}
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
@@ -190,6 +260,7 @@ export default function CaregiverForm() {
                 <div className="mt-1">
                   <input
                     id="email"
+                    onChange={(e) => setEmail(e.target.value)}
                     name="email"
                     type="email"
                     autoComplete="email"
@@ -325,49 +396,40 @@ export default function CaregiverForm() {
               </p>
             </div>
             <div className="mt-6">
-              <fieldset>
-                <legend className="sr-only">Education</legend>
-                <div
-                  className="text-base font-medium text-gray-900"
-                  aria-hidden="true"
-                >
-                  Educaton
-                </div>
-                    <p>Select your highest level of education and year</p>
-                <div className="mt-4 space-y-4 flex lg:flex-row md:flex-col sm:flex-row">
-                  <div className="mt-1 sm:col-span-2">
-                    <select
-                      id="city"
-                      name="city"
-                      autoComplete="city-name"
-                      className="block w-2/3 min-w-0 flex-1 p-3 rounded border border-gray-400 focus:border-indigo-6 00 focus:ring-indigo-500 sm:text-sm "
-                    >
-                      <option>High School</option>
-                      <option>Diploma</option>
-                      <option>College Graduate</option>
-                      <option>University Graduate</option>
-                    </select>
-                  </div>
-                  <div className="mt-1 sm:col-span-2">
-                    <label> Year</label>
-                    <YearPicker/>
-                  </div>
+              <fieldset className="mt-6">
+                <legend className="contents text-base font-medium text-gray-900">
+                  Education
+                </legend>
+                <p className="text-sm text-gray-500">
+                  Briefly describe your Educational Background.
+                </p>
+                <div className="mt-4 space-y-4">
+                  <textarea
+                    id="education"
+                    onChange={(e) => setEducation(e.target.value)}
+                    name="education"
+                    placeholder="Write about your educational background"
+                    rows={4}
+                    className="block w-1/2 p-2 rounded-md border border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    defaultValue={""}
+                  />
                 </div>
               </fieldset>
               <fieldset className="mt-6">
                 <legend className="contents text-base font-medium text-gray-900">
-                  Experiences
+                  Job Experience
                 </legend>
                 <p className="text-sm text-gray-500">
                   Briefly describe your job Experience.
                 </p>
                 <div className="mt-4 space-y-4">
-                <textarea
-                    id="about"
-                    name="about"
-                    placeholder="Write about yourself here"
+                  <textarea
+                    id="experience"
+                    onChange={(e) => setExperience(e.target.value)}
+                    name="experience"
+                    placeholder="Write about your job experience"
                     rows={4}
-                    className="block w-1/2 rounded-md border border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    className="block w-1/2 p-2 rounded-md border border-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     defaultValue={""}
                   />
                 </div>
