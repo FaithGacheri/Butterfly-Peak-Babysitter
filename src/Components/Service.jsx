@@ -8,6 +8,7 @@ import img6 from "../Images/meal.jpg"
 function Service() {
   return (
     <div className='service'>
+      
       <div className='service_box'>
         <div className='service_box_item'>
             <img id='s-img' src={img3}alt="" />
