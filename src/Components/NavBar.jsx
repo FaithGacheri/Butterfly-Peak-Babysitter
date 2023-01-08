@@ -67,7 +67,7 @@ export default function NavBar() {
                 </Link>
                 <Link
                   to="/sign_up"
-                  className="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
+                  className="bg-gradient-to-r from-teal-500 to-cyan-600 inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
                 >
                   Sign Up
                 </Link>
@@ -77,7 +77,7 @@ export default function NavBar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-offset-2 focus:ring-offset-teal-800">
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-12 w-12 rounded-full"
@@ -95,13 +95,13 @@ export default function NavBar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-cyan-600">
                         <Menu.Item>
                           {({ active }) => (
                             <Link
                               to="#"
                               className={classNames(
-                                active ? 'bg-gray-100' : '',
+                                active ? 'bg-gradient-to-r from-teal-500 to-cyan-600' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
@@ -114,7 +114,7 @@ export default function NavBar() {
                             <Link
                               to="#"
                               className={classNames(
-                                active ? 'bg-gray-100' : '',
+                                active ? 'bg-gradient-to-r from-teal-500 to-cyan-600' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
@@ -127,7 +127,7 @@ export default function NavBar() {
                             <Link
                               to="#"
                               className={classNames(
-                                active ? 'bg-gray-100' : '',
+                                active ? 'bg-gradient-to-r from-teal-500 to-cyan-600' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
