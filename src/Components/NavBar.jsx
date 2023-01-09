@@ -7,7 +7,7 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
-  const [loggedIn, setLoggedIn]=useState()
+  const [loggedIn, setLoggedIn]=useState(true)
   return (
     <div>
       <div className="relative ">
