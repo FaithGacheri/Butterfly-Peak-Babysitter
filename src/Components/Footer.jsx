@@ -1,60 +1,71 @@
-import React from "react";
-import { FaPhoneSquareAlt, FaRegEnvelope, FaInstagram, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
-//import "./App"
-import "../Styles/Footer.css"
-
-function Footer () {
-    return (
-        <div className="footer">
-            <div className="section1">
-                <h2>Contacts</h2>
-                <div className="footer-contact">
-                   <p><FaPhoneSquareAlt /> 
-                    +254 25100100
-                    +254 764380927</p>
-                    <FaRegEnvelope />
-                    <p>Butterflypeaksbabysitters@gmail.com</p>
+import React from 'react'
+import "../Styles/Footer.css";
+import {FaFacebook,FaMailBulk, FaPhone, FaSearchLocation, FaTwitter,FaInstagram, FaYoutube} from 'react-icons/fa'
+const Footer = () => {
+  return (
+    <div className='bg-gray-900 text-white p-5'>
+        <div className='grid grid-cols-2 m-2'>
+            <div className='grid grid-cols-2'>
+            <div className='flex justify-center'>
+                <div className=''>
+                    <FaSearchLocation size={20}style={{color: '#ffffff', marginRight: '2rem' }} />
+                </div>
+                <div>
+                    <p>Ngong road</p>
+                    <h4>Nairobi, Kenya</h4>
                 </div>
             </div>
+                   
+    <div>
+                     <div className='phone'>
+                        <h4 className='flex flex-row'><FaPhone size={20}style={{color: '#ffffff', marginRight: '2rem' }} /> <span>+254 725 100 100</span></h4>
+                        <h4  className='flex flex-row' ><FaPhone size={20}style={{color: '#ffffff', marginRight: '2rem' }} /><span> +254 730 946 820</span></h4>    
+                    </div>
+                    <div className='email'>
+                        <h4 className='flex flex-row'><FaMailBulk size={20}style={{color: '#ffffff', marginRight: '2rem' }}/><span>Bulkbutterflypeaks@gmail.com</span></h4>
 
-            <div className="section2">
-                <h2>Socials</h2>
-                <div className="socials">
-                    <FaInstagram /> <FaFacebookSquare /> <FaTwitterSquare />
-                </div>
-            </div>
-
-            <div className="section3">
-                <h2>About</h2>
-                <p>Impact stories
-                    Location
-                    Leadership 
-                    How to hire
-                </p>
-            </div>
-
-            <div className="section4">
-                <h2>People</h2>
-                <p> Book your nanny
-                    Look for opprtunity
-                    Join the commumity
-                </p>
-            </div>
-
-            <div className="section5">
-                <h2>Contact us</h2>
-                <p>
-                    INvestors 
-                     Blog 
-                     Covid 19 
-                  
-
-                </p>
-            </div>
-
+                    </div>
         </div>
 
-    )
+            </div>
+          
+
+       <div className='grid grid-cols-3'>
+        <div className=''>
+        <h4>About</h4>
+        <p>Impact stories</p>
+        <p>Location</p>
+        <p>How to hire</p> 
+        </div>
+        
+        
+        <div className=''>
+        <h4>People</h4>
+        <p>Book your nanny</p>
+        <p>Look for opportunity</p>   
+        <p>Join the community</p> 
+        </div>
+
+        <div className='contacts'>
+            <h4>Contact Us</h4>
+            <p>Investors</p>
+            <p>Blog</p>
+            <p>Covid 19</p>
+        </div>
+        
+        <div className='flex flex-row justify-evenly'>
+            <FaFacebook size={30}style={{color: '#ffffff', marginRight: '1rem' }} />
+            <FaTwitter size={30}style={{color: '#ffffff', marginRight: '1rem' }} />
+            <FaInstagram size={30}style={{color: '#ffffff', marginRight: '1rem' }} />
+            <FaYoutube size={30}style={{color: '#ffffff', marginRight: '1rem' }}/>
+
+        </div>
+        </div>
+        
+        </div>
+    </div>
+    
+  )
 }
 
-export default Footer;
+export default Footer
