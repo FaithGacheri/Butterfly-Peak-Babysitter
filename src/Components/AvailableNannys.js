@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../Styles/Cards.css";
 import Search from "./Search";
 
@@ -26,7 +27,7 @@ export default function AvailableNannys () {
 
     }
     function favouritenanny(data) {
-        fetch(`http://localhost:3000/favouriteNanny`, {
+        fetch(`http://localhost:3000/favouriteNannys`, {
             method: 'POST',
             headers: {"content-type":"application/json"},
             body: JSON.stringify({
@@ -116,7 +117,13 @@ const Nanny = ({ name, data, nannyLocation, rating, nannyPrice, nanny_url, favou
                     >   
                        Favourite
                      </button>
-
+                 <div className="view more">
+                  <button>
+                    <small>
+                        <Link to="/card-item">
+                        <small>view more...</small>
+                        </Link></small></button>
+                 </div>
                 </div>
               </span>
          </div>
