@@ -17,6 +17,18 @@ export default function Favourite () {
             })
     }, [])
 
+
+//       function handleDelete() {
+//     fetch(`http://localhost:3000/favouriteNanny/${favouriteNanny.id}`, {
+//       method: "DELETE",
+//     })
+//       .then((response) => response.json())
+//       .then(() => {
+//         setNannyData((nannyData) => nannyData.filter((favouriteNanny) => favouriteNanny.id !== nannyData.id));
+//         alert("Nanny removed");
+//       });
+//   }
+
     //event listener watching change on search component
     const change = (e) => {
         setNannyData(searchResult.filter(nannyData =>
@@ -40,6 +52,7 @@ export default function Favourite () {
                                 rating={data.rating}
                                 nannyPrice={data.nannyPrice}
                                 nanny_url={data.nanny_url}
+                                // handleDelete={handleDelete}
                             />
                         </div>
                     );
@@ -84,7 +97,12 @@ const Nanny = ({ name, nannyLocation, rating, nannyPrice, nanny_url}) => {
                     >
                     Book
                     </button>
-
+                     <button
+                    className="ui mini  button"
+                    >
+                    Remove
+                    {/* onClick={handleDelete} */}
+                    </button>
                 </div>
               </span>
          </div>
