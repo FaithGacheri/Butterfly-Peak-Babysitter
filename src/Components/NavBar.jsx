@@ -1,3 +1,5 @@
+
+
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -5,10 +7,10 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className="bg-gray-900">
-      <div className="relative overflow-hidden">
+    <div>
+      <div className="relative ">
         <Popover as="header" className="relative">
-          <div className="bg-gray-900 pt-6">
+          <div className="bg-gray-900 pt-6 items-center pb-4">
             <nav
               className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
               aria-label="Global"
@@ -44,10 +46,16 @@ export default function NavBar() {
                     About Us
                   </Link>
                   <Link
-                    to="/Contact Us"
+                    to="/contact_us"
                     className="text-base font-medium text-white hover:text-gray-300"
                   >
                     Contact Us
+                  </Link>
+                  <Link
+                    to="/blog"
+                    className="text-base font-medium text-white hover:text-gray-300"
+                  >
+                    Blog
                   </Link>
                 </div>
               </div>
@@ -86,7 +94,7 @@ export default function NavBar() {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600"
+                      src="https://cdn.logo.com/hotlink-ok/logo-social.png"
                       alt=""
                     />
                   </div>
@@ -112,10 +120,16 @@ export default function NavBar() {
                       About Us
                     </Link>
                     <Link
-                      to="/Contact Us"
+                      to="/contact_us"
                       className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
                     >
                       Contact Us
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                    >
+                      Blog
                     </Link>
                   </div>
                   <div className="mt-6 px-5">
@@ -129,7 +143,10 @@ export default function NavBar() {
                   <div className="mt-6 px-5">
                     <p className="text-center text-base font-medium text-gray-500">
                       Already have an account?{" "}
-                      <Link to="/login" className="text-gray-900 hover:underline">
+                      <Link
+                        to="/login"
+                        className="text-gray-900 hover:underline"
+                      >
                         Login
                       </Link>
                     </p>
@@ -139,7 +156,6 @@ export default function NavBar() {
             </Popover.Panel>
           </Transition>
         </Popover>
-       
       </div>
     </div>
   );

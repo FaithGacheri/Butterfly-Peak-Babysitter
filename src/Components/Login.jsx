@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <>
-      <div className=" bg-gray-900 flex h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8 overflow-hidden">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white">
-            Login in to your account
+          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-indigo-600">
+            Login to your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Or{" "}
@@ -76,12 +76,12 @@ export default function Login() {
                 </div>
 
                 <div className="text-sm">
-                  <a
-                    href="#"
+                  <Link
+                    to="/login/forgot_password"
                     className="font-medium text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot your password?
-                  </a>
+                  </Link>
                 </div>
               </div>
 
