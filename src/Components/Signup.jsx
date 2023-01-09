@@ -44,7 +44,7 @@ export default function Signup({ onLogin }) {
         r.json().then((user) => onLogin(user));
         showToastMessage();
         setTimeout(() => {
-          navigate("/cards");
+          navigate("/login");
         }, 1000);
       } else {
         r.json().then((err) => {
