@@ -7,37 +7,56 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/U-ZxSjEO0ZlsO94T6_iRK6vc4dXKEr-Egk7Hs26sxtw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQxNTc3XzA5/ODIyMzhfMDAwMDc3/NC5wbmc.png"
-
     },
     {
-      "id": 124,
-      "name": "Amani L",
-      "nannyPrice": "1.5$/h",
-      "rating": "⭐️⭐️⭐️",
-      "nannyLocation": "Nairobi",
-      "nanny_url": "https://images.generated.photos/U-ZxSjEO0ZlsO94T6_iRK6vc4dXKEr-Egk7Hs26sxtw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQxNTc3XzA5/ODIyMzhfMDAwMDc3/NC5wbmc.png"
-
-    },
-        {
-      "id": 121,
-      "name": "Fridah Ali",
-      "nannyPrice": "1.5$/h",
-      "rating": "⭐️⭐️⭐️⭐️",
-      "nannyLocation": "Nairobi",
-      "nanny_url": "https://images.generated.photos/Y9cNFSw0TQm1-GC8TlseeQg4EkOXlV5kqTX0UgAr4fA/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQ2Njg2LnBu/Zw.png"
-    
-    },
-    {
-      "id": 109,
       "name": "Mary M",
-      "nannyPrice": "1.5$/h",
-      "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
-      "nanny_url": "https://images.generated.photos/_CE6Lofh881MLiAFWy2uvWZVeFdVMCDihUGIKoYI0ik/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMjEw/ODQ1LmpwZw.jpg"
+      "rating": "⭐️⭐️⭐️⭐️⭐️",
+      "nannyPrice": "1.5$/h",
+      "nanny_url": "https://images.generated.photos/_CE6Lofh881MLiAFWy2uvWZVeFdVMCDihUGIKoYI0ik/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMjEw/ODQ1LmpwZw.jpg",
+      "id": 116
+    },
+    {
+      "name": "Mercy Nj",
+      "nannyLocation": "Nairobi",
+      "rating": "⭐️⭐️⭐️⭐️⭐️",
+      "nannyPrice": "1.5$/h",
+      "nanny_url": "https://images.generated.photos/8Pd-JrxHYINkDUQ-SVjRJ23qT4KEdqL0LUYV8-fZNrc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDYyMzg1XzA4MjAx/NzRfMDA5OTY5Ni5q/cGc.jpg",
+      "id": 117
+    },
+    {
+      "name": "Mercy Nj",
+      "nannyLocation": "Nairobi",
+      "rating": "⭐️⭐️⭐️⭐️⭐️",
+      "nannyPrice": "1.5$/h",
+      "nanny_url": "https://images.generated.photos/8Pd-JrxHYINkDUQ-SVjRJ23qT4KEdqL0LUYV8-fZNrc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDYyMzg1XzA4MjAx/NzRfMDA5OTY5Ni5q/cGc.jpg",
+      "id": 118
+    },
+    {
+      "name": "Mercy Nj",
+      "nannyLocation": "Nairobi",
+      "rating": "⭐️⭐️⭐️⭐️⭐️",
+      "nannyPrice": "1.5$/h",
+      "nanny_url": "https://images.generated.photos/8Pd-JrxHYINkDUQ-SVjRJ23qT4KEdqL0LUYV8-fZNrc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDYyMzg1XzA4MjAx/NzRfMDA5OTY5Ni5q/cGc.jpg",
+      "id": 119
+    },
+    {
+      "name": "Mercy Nj",
+      "nannyLocation": "Nairobi",
+      "rating": "⭐️⭐️⭐️⭐️⭐️",
+      "nannyPrice": "1.5$/h",
+      "nanny_url": "https://images.generated.photos/8Pd-JrxHYINkDUQ-SVjRJ23qT4KEdqL0LUYV8-fZNrc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDYyMzg1XzA4MjAx/NzRfMDA5OTY5Ni5q/cGc.jpg",
+      "id": 120
+    },
+    {
+      "name": "Mercy Nj",
+      "nannyLocation": "Nairobi",
+      "rating": "⭐️⭐️⭐️⭐️⭐️",
+      "nannyPrice": "1.5$/h",
+      "nanny_url": "https://images.generated.photos/8Pd-JrxHYINkDUQ-SVjRJ23qT4KEdqL0LUYV8-fZNrc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDYyMzg1XzA4MjAx/NzRfMDA5OTY5Ni5q/cGc.jpg",
+      "id": 121
     }
-
   ],
-
   "nannyData": [
     {
       "id": 109,
@@ -46,7 +65,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/_CE6Lofh881MLiAFWy2uvWZVeFdVMCDihUGIKoYI0ik/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMjEw/ODQ1LmpwZw.jpg"
-
     },
     {
       "id": 110,
@@ -55,7 +73,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/8Pd-JrxHYINkDUQ-SVjRJ23qT4KEdqL0LUYV8-fZNrc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDYyMzg1XzA4MjAx/NzRfMDA5OTY5Ni5q/cGc.jpg"
-
     },
     {
       "id": 113,
@@ -64,7 +81,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/LGQZ-7G6D6py8R4u4i7ARWconpYrJqAd2SE8GWZRNAg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDY4MjAyXzAzMDgx/OTlfMDU3Mzk0Ni5q/cGc.jpg"
-
     },
     {
       "id": 114,
@@ -73,7 +89,6 @@
       "rating": "⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/_CE6Lofh881MLiAFWy2uvWZVeFdVMCDihUGIKoYI0ik/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMjEw/ODQ1LmpwZw.jpg"
-
     },
     {
       "id": 115,
@@ -82,7 +97,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/U-ZxSjEO0ZlsO94T6_iRK6vc4dXKEr-Egk7Hs26sxtw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQxNTc3XzA5/ODIyMzhfMDAwMDc3/NC5wbmc.png"
-
     },
     {
       "id": 116,
@@ -91,7 +105,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/_CE6Lofh881MLiAFWy2uvWZVeFdVMCDihUGIKoYI0ik/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMjEw/ODQ1LmpwZw.jpg"
-  
     },
     {
       "id": 117,
@@ -100,7 +113,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/U-ZxSjEO0ZlsO94T6_iRK6vc4dXKEr-Egk7Hs26sxtw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQxNTc3XzA5/ODIyMzhfMDAwMDc3/NC5wbmc.png"
-
     },
     {
       "id": 118,
@@ -109,7 +121,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/_CE6Lofh881MLiAFWy2uvWZVeFdVMCDihUGIKoYI0ik/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMjEw/ODQ1LmpwZw.jpg"
-
     },
     {
       "id": 119,
@@ -118,7 +129,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/U-ZxSjEO0ZlsO94T6_iRK6vc4dXKEr-Egk7Hs26sxtw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQxNTc3XzA5/ODIyMzhfMDAwMDc3/NC5wbmc.png"
-
     },
     {
       "id": 120,
@@ -127,7 +137,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/haBL6QlUm7-yEsIWV8vLRp5GzTqbxQt1AR19tDc7-vk/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMDY4MjAyXzAz/MDgxOTlfMDU3Mzk0/Ni5wbmc.png"
-
     },
     {
       "id": 121,
@@ -136,7 +145,6 @@
       "rating": "⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/Y9cNFSw0TQm1-GC8TlseeQg4EkOXlV5kqTX0UgAr4fA/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQ2Njg2LnBu/Zw.png"
-    
     },
     {
       "id": 122,
@@ -145,7 +153,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/sgJcR79dNdUZT7A2FXOD4CdRumi2XYoPVodGRD73xek/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wNDg4NTkyXzA0/Mzc3NzRfMDM1ODQ5/OS5wbmc.png"
-   
     },
     {
       "id": 123,
@@ -154,7 +161,6 @@
       "rating": "⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/plBB4AnERiozPEF2pBeFXgD9iK9hh_LqppXg9oxtNKc/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMzQ2NDc1XzAx/MTU3MjRfMDk2OTg5/MS5wbmc.png"
-
     },
     {
       "id": 124,
@@ -163,7 +169,6 @@
       "rating": "⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/U-ZxSjEO0ZlsO94T6_iRK6vc4dXKEr-Egk7Hs26sxtw/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMjQxNTc3XzA5/ODIyMzhfMDAwMDc3/NC5wbmc.png"
-
     },
     {
       "id": 125,
@@ -172,7 +177,6 @@
       "rating": "⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/wDJZKQk6ZPHw9L_YKAoRSLBcNB0CwLVNyzmtipf0h34/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudC8wMjEw/ODQ1LnBuZw.png"
-
     },
     {
       "id": 143,
@@ -181,8 +185,6 @@
       "rating": "⭐️⭐️⭐️⭐️⭐️",
       "nannyLocation": "Nairobi",
       "nanny_url": "https://images.generated.photos/haBL6QlUm7-yEsIWV8vLRp5GzTqbxQt1AR19tDc7-vk/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy90cmFu/c3BhcmVudF92My92/M18wMDY4MjAyXzAz/MDgxOTlfMDU3Mzk0/Ni5wbmc.png"
-
     }
   ]
-  
 }
