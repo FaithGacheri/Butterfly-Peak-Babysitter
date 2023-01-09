@@ -61,6 +61,14 @@
   margin: 1%;
   border-radius: 35px;
 }
+.favourite{
+  background-color: #a91919;
+   border-radius: 10px;
+}
+.favourite:hover {
+  background-color: #caa5ea;
+  color: white;
+}
 .button {
   background-color: #f4b14d;
   border-radius: 10px;
@@ -84,4 +92,8 @@
 .fav-button:hover {
   background-color: #a91919;
   color: white;
+}
+.view {
+  flex: right;
+  color: #fff;
 }
