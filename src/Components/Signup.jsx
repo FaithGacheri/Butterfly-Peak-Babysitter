@@ -16,16 +16,14 @@ export default function Signup({ onLogin }) {
       className: "toast-message",
     });
   };
-  const toastMessage = () => {
-    toast.success("Password don't match !", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-  };
-  const errorMessage = () => {
-    toast.success("Username/email already taken !", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-  };
+  const passwordError = errors
+    .map((err) => err)
+    .filter((a) => a)
+    .includes("Password confirmation doesn't match Password");
+  const usernameError = errors
+    .map((err) => err)
+    .filter((a) => a)
+    .includes("Username has already been taken");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -46,17 +44,11 @@ export default function Signup({ onLogin }) {
         r.json().then((user) => onLogin(user));
         showToastMessage();
         setTimeout(() => {
-          navigate("/card-item");
-        }, 2000);
+          navigate("/cards");
+        }, 1000);
       } else {
         r.json().then((err) => {
-          setErrors(err.errors.password_confirmation);
-          console.log(errors);
-          if (errors.join("") === "doesn't match Password") {
-            toastMessage();
-          } else if (errors) {
-            errorMessage();
-          }
+          setErrors(err.errors);
         });
       }
     });
@@ -125,6 +117,7 @@ export default function Signup({ onLogin }) {
                   />
                 </div>
               </div>
+              {usernameError ? <div className="flex items-center"><p className="italic text-red-600 justify-center">Username already taken. Try another</p></div> : null}
               <div>
                 <label
                   htmlFor="password"
@@ -161,6 +154,14 @@ export default function Signup({ onLogin }) {
                   />
                 </div>
               </div>
+              {passwordError ? (
+                <div className="flex items-center justify-center">
+                  <p className="italic text-red-600">
+                    The passwords doesn't match❗
+                  </p>
+                </div>
+              ) : null}
+
               <div>
                 <button
                   type="submit"
