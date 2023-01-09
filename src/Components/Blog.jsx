@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Blog.css"
+import {Link} from "react-router-dom"
 
 function Blog() {
   return (
@@ -14,7 +15,7 @@ function Blog() {
           <div className="content">
             <h2>Title One</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis, ad ratione error at animi optio odio dolores dolor earum atque, facilis voluptatem quas eveniet maiores quaerat enim voluptatibus sapiente?</p>
-            <button id="g-btn">Read More</button>
+            <Link to="/blog/blog1"><button id="g-btn">Read More</button></Link>
 
           </div>
         </div>
