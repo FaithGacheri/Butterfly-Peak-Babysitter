@@ -58,7 +58,7 @@ export default function NavBar() {
                   </Link>
                 </div>
               </div>
-              <div className="hidden md:flex md:items-center md:space-x-6">
+             {loggedIn?( <div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
                   to="/login"
                   className="text-base font-medium text-white hover:text-gray-300"
@@ -71,7 +71,7 @@ export default function NavBar() {
                 >
                   Sign Up
                 </Link>
-              </div>
+              </div>):(null)}
               {loggedIn? (<div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
                   {/* Profile dropdown */}
