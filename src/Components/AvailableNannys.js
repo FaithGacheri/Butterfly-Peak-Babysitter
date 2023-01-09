@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../Styles/Cards.css";
 import Search from "./Search";
+
 
 
 export default function AvailableNannys () {
     const [nannyData, setNannyData] = useState([]);
     const [searchResult, setSearchResult] = useState([])
-
+   
     useEffect(() => {
         fetch(`http://localhost:3000/nannyData`)
             .then((res) => res.json())
@@ -22,8 +24,27 @@ export default function AvailableNannys () {
         setNannyData(searchResult.filter(nannyData =>
             nannyData.name.toLowerCase()
                 .includes(e.target.value.toLowerCase())))
+
     }
+    function favouritenanny(data) {
+        fetch(`http://localhost:3000/favouriteNannys`, {
+            method: 'POST',
+            headers: {"content-type":"application/json"},
+            body: JSON.stringify({
+                name:data.name,
+                nannyLocation:data.nannyLocation,
+                rating:data.rating,
+                nannyPrice:data.nannyPrice,
+                nanny_url:data.nanny_url
+            })
+
+        } )
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch(err => console.error(err.message))
+
     
+    }
     return (
         <>
  
@@ -35,11 +56,13 @@ export default function AvailableNannys () {
                         <div key={key}>
                             <Nanny
                                 key={key}
+                                data={data}
                                 name={data.name}
                                 nannyLocation={data.nannyLocation}
                                 rating={data.rating}
                                 nannyPrice={data.nannyPrice}
                                 nanny_url={data.nanny_url}
+                                favouritenanny={favouritenanny}
                             />
                         </div>
                     );
@@ -50,7 +73,9 @@ export default function AvailableNannys () {
 
 };
 // const favouriteNanny
-const Nanny = ({ name, nannyLocation, rating, nannyPrice, nanny_url}) => {
+const Nanny = ({ name, data, nannyLocation, rating, nannyPrice, nanny_url, favouritenanny}) => {
+  
+   console.log(data);
     if (!name) return <div />;
     return (
   
@@ -88,10 +113,17 @@ const Nanny = ({ name, nannyLocation, rating, nannyPrice, nanny_url}) => {
 
                     <button
                        className="fav-button"
+                       onClick={()=>favouritenanny(data)}
                     >   
                        Favourite
                      </button>
-
+                 <div className="view more">
+                  <button>
+                    <small>
+                        <Link to="/card-item">
+                        <small>view more...</small>
+                        </Link></small></button>
+                 </div>
                 </div>
               </span>
          </div>
