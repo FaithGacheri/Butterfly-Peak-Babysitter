@@ -6,10 +6,11 @@ import Search from "./Search";
 export default function Favourite () {
 
     const [nannyData, setNannyData] = useState([]);
-    const [searchResult, setSearchResult] = useState([])
+    const [searchResult, setSearchResult] = useState([]);
+    const [favouriteNanny, setfavouriteNanny] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/favouriteNanny`)
+        fetch(`http://localhost:3000/favouriteNannys`)
             .then((res) => res.json())
             .then((nannyData) => {
                 setNannyData(nannyData)
@@ -18,16 +19,16 @@ export default function Favourite () {
     }, [])
 
 
-//       function handleDelete() {
-//     fetch(`http://localhost:3000/favouriteNanny/${favouriteNanny.id}`, {
-//       method: "DELETE",
-//     })
-//       .then((response) => response.json())
-//       .then(() => {
-//         setNannyData((nannyData) => nannyData.filter((favouriteNanny) => favouriteNanny.id !== nannyData.id));
-//         alert("Nanny removed");
-//       });
-//   }
+      function handleDelete() {
+    fetch(`http://localhost:3000/favouriteNannys/${favouriteNanny.id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then(() => {
+        setfavouriteNanny((favouriteNanny) => favouriteNanny.filter((favouriteNann) => favouriteNann.id !== favouriteNanny.id));
+        alert("Nanny removed");
+      });
+  }
 
     //event listener watching change on search component
     const change = (e) => {
@@ -52,7 +53,7 @@ export default function Favourite () {
                                 rating={data.rating}
                                 nannyPrice={data.nannyPrice}
                                 nanny_url={data.nanny_url}
-                                // handleDelete={handleDelete}
+                                handleDelete={handleDelete}
                             />
                         </div>
                     );
@@ -62,7 +63,7 @@ export default function Favourite () {
     );
   
 };
-const Nanny = ({ name, nannyLocation, rating, nannyPrice, nanny_url}) => {
+const Nanny = ({ name, nannyLocation, rating, nannyPrice, nanny_url, handleDelete}) => {
     if (!name) return <div />;
     return (
   
@@ -98,10 +99,10 @@ const Nanny = ({ name, nannyLocation, rating, nannyPrice, nanny_url}) => {
                     Book
                     </button>
                      <button
-                    className="ui mini  button"
+                    className="favourite "
+                    onClick={handleDelete}
                     >
                     Remove
-                    {/* onClick={handleDelete} */}
                     </button>
                 </div>
               </span>
