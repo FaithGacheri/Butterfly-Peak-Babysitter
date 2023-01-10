@@ -25,7 +25,7 @@ function Blog() {
           <div className="g-content">
             <h2>Title Two</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis, ad ratione error at animi optio odio dolores dolor earum atque, facilis voluptatem quas eveniet maiores quaerat enim voluptatibus sapiente?</p>
-            <button id="g-btn">Read More</button>
+            <Link to="/blog/blog2"><button id="g-btn">Read More</button></Link>
 
           </div>
         </div>
