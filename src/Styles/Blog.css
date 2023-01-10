@@ -7,7 +7,7 @@
 body{
     /* background-color: lightsalmon; */
 }
-.section{
+.g-section{
     width: 75%;
     margin: 75px auto;
     display: grid;
@@ -16,47 +16,47 @@ body{
 
 }
 
-.card{
+.g-card{
     background-color: #333;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.4);
 }
 
-.image-section{
+.g-image-section{
     min-height: 250px;   
 }
 
-.card .img-one{
+.g-card .img-one{
     background-image: url(../Images/blog1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.card .img-two{
+.g-card .img-two{
     background-image: url(../Images/diaper.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.card .img-three{
+.g-card .img-three{
     background-image: url(../Images/diaper.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.content{
+.g-content{
     text-align: center;
     padding: 20px 10px;
 }
 
-.content h2{
+.g-content h2{
     letter-spacing: 2px;
     color: #c9c9c9;
 }
 
-.content p{
+.g-content p{
     font-size: 16px;
     color: #7a7a7a;
     margin: 15px 0px;

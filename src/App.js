@@ -12,26 +12,27 @@ import Blog1 from "./Components/Blog1";
 import AvailableNannys from "./Components/AvailableNannys";
 import Favourite from "./Components/Favourite";
 import Caregiver from "./Components/CaregiverForm";
-import CardItem from "./Components/CardItem";
-import Checkout from "./Components/Checkout";
-import CheckoutstatusPage from "./Components/CheckoutStatusPage";
+import CardItem from './Components/CardItem'
+import Checkout from './Components/Checkout'
+
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="blog">
-          <Route path="blog1" element={<Blog1 />} />
-        </Route>
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
-        <Route path="/sign_up" element={<Signup />} />
-        <Route exact path="/">
+  <div >
+  <NavBar/>
+  <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="/about" element={<About/>} />
+    <Route path="/blog" element={<Blog/>} />
+    <Route path="blog">
+      <Route path="blog1" element={<Blog1/>} />
+    </Route>
+    <Route path="userprofile" element={<ParentProfile/>}/>
+    <Route path="/contact" element={<Contact/>} />
+    <Route path="/login" element={<Login/>} />
+    <Route path='/login/forgot_password' element={<ForgotPasswordForm/>}/>
+    <Route path="/sign_up" element={<Signup/>} />
+    <Route exact path="/">
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="/cards" element={<AvailableNannys />} />
           <Route exact path="/favourite" element={<Favourite />} />
