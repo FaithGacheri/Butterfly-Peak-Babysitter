@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="bg-gray-900 text-white p-5 pt-20 ">
+    <div>
       <div className="grid grid-cols-2 m-2">
         <div className="grid grid-cols-2">
           <div className="flex justify-center">
