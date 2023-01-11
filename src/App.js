@@ -17,6 +17,7 @@ import Favourite from "./Components/Favourite";
 import Caregiver from "./Components/CaregiverForm";
 import CardItem from './Components/CardItem'
 import Checkout from './Components/Checkout'
+import ParentProfile from './Components/Profile';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Route path="blog2" element={<Blog2/>} />
       <Route path="blog3" element={<Blog3/>} />
     </Route>
+    <Route path="userprofile" element={<ParentProfile/>}/>
     <Route path="/contact" element={<Contact/>} />
     <Route path="/login" element={<Login/>} />
     <Route path='/login/forgot_password' element={<ForgotPasswordForm/>}/>
