@@ -1,6 +1,6 @@
 .all{
     background-color: #111827;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 .text{
@@ -54,8 +54,15 @@
   border-radius: 1rem;
   padding: 0.3rem 1rem;
 }
-.card {
+/* .card {
   border: solid 1px rgb(160, 64, 64);
+  padding: 15px;
+  width : 20%;
+  margin: 1%;
+  border-radius: 35px;
+} */
+.card {
+  /* border: solid 1px #14b8a6; */
   padding: 15px;
   width : 20%;
   margin: 1%;
@@ -83,7 +90,7 @@
   padding: 0px;
 }
 .text-wrap{
-  color: antiquewhite;
+  color: rgb(215, 250, 221);
 }
 .fav-button {
   background-color: rgb(157, 215, 32);
@@ -97,3 +104,16 @@
   flex: right;
   color: #fff;
 }
+.view:hover{
+  flex-grow: unset;
+ color: #4CAF50;
+ font-size: 20px;
+}
+.whole{
+  width: 80%;
+  margin: auto;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+ }
