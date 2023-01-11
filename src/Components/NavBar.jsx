@@ -34,25 +34,25 @@ export default function NavBar() {
                 <div className="hidden space-x-8 md:ml-10 md:flex">
                   <Link
                     to="/"
-                    className="text-base font-medium text-white hover:text-gray-300"
+                    className="text-base font-2xl text-white focus:text-red-600 focus:text-xl hover:text-gray-300"
                   >
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className="text-base font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
                   >
                     About Us
                   </Link>
                   <Link
                     to="/contact_us"
-                    className="text-base font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
                   >
                     Contact Us
                   </Link>
                   <Link
                     to="/blog"
-                    className="text-base font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
                   >
                     Blog
                   </Link>
