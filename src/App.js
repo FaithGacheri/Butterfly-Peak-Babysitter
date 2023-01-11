@@ -14,6 +14,8 @@ import Favourite from "./Components/Favourite";
 import Caregiver from "./Components/CaregiverForm";
 import CardItem from './Components/CardItem'
 import Checkout from './Components/Checkout'
+import CheckoutstatusPage from "./Components/CheckoutStatusPage";
+import ParentProfile from './Components/Profile'
 
 
 function App() {
