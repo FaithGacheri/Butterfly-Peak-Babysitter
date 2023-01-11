@@ -19,7 +19,7 @@ import CardItem from './Components/CardItem'
 import Checkout from './Components/Checkout'
 import CheckoutstatusPage from "./Components/CheckoutStatusPage";
 import ParentProfile from './Components/Profile'
-
+import CaregiverReviewsPage from './Components/CaregiverReviewsPage'
 
 function App() {
   return (
@@ -49,7 +49,11 @@ function App() {
         </Route>
         <Route path="cards">
           <Route path="card-item" element={<CardItem />} />
+          <Route path="card-item">
+          <Route path="reviews" element={<CaregiverReviewsPage/>} />
         </Route>
+        </Route>
+       
         <Route path="checkout">
           <Route path="checkout_status" element={<CheckoutstatusPage/>} />
         </Route>

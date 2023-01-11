@@ -46,9 +46,9 @@ export default function Login() {
  return (
     <>
     <ToastContainer/>
-      <div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-indigo-600">
+      <div className="h-auto flex w-4/5 m-auto flex-col justify-around py-12  overflow-hidden">
+        <div className="lg:w-full sm:mx-auto sm:w-full sm:max-w-md">
+          <h2 className="mt-6 text-center text-4xl font-bold  text-indigo-600">
             Login to your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
@@ -62,8 +62,8 @@ export default function Login() {
           </p>
         </div>
 
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="w-fit mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+          <div className="h-full w-full bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form onSubmit={handleSubmit} className="space-y-6" action="#" method="POST">
               <div>
                 <label
