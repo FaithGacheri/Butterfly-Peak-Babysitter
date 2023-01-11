@@ -54,6 +54,16 @@ function Blog2() {
         learn by watching and copying.You can show him/her videos of other
         children using them.
       </p>
+      {/* <div className="videos">
+        <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/G9TJXdq_iBQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+        ></iframe>
+    </div> */}
     </div>
   );
 }
