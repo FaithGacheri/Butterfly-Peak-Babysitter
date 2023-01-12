@@ -42,12 +42,12 @@ function Home() {
                       An exemplary baby-sitting service company, we recruit the
                       best nannies, and at your request, they are avail to your home address as you as possible
                     </p>
-                    <div className="mt-10 sm:mt-12">
+                    <div className="sm:mt-12 ml-0">
                       <form
-                        action="#"
-                        className="sm:mx-auto sm:max-w-xl lg:mx-0"
+                        action="POST"
+                        className="sm:mx-auto lg:mx-0"
                       >
-                        <div className="sm:flex">
+                        <div className="flex items-center m-0">
                           <div className="min-w-0 flex-1">
                             <label htmlFor="email" className="sr-only">
                               Email address
@@ -59,7 +59,7 @@ function Home() {
                               className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                             />
                           </div>
-                          <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <div className="sm:mt-0 sm:ml-3">
                             <Link to="/sign_up">
                             <button
                               className="block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
@@ -69,7 +69,7 @@ function Home() {
                             </Link>
                           </div>
                         </div>
-                        <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                        <p className="mt-3 text-xl text-gray-300 sm:mt-4">
                           Register and get 2Day care for free, no credit card
                           necessary. By providing your email, you agree to our{" "}
                           <Link to="/services" className="font-medium text-white">
@@ -77,7 +77,9 @@ function Home() {
                           </Link>
                           .
                         </p>
-                      </form>
+                        </form>
+                     
+                    
                     </div>
                     <div>
                       <Link to="/cards">

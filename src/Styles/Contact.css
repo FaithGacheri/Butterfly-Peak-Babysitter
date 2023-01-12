@@ -31,7 +31,7 @@
     color: white;
   }
   
-  form {
+  #contact-form{
     display: flex;
     flex-direction: column;
     width: auto;
@@ -40,7 +40,7 @@
     border-radius: 0.375rem;
   }
   
-  form input {
+  #input1 {
     height: 40px;
     width: 80%;
     border: none;
@@ -48,7 +48,7 @@
     color: black;
   }
   
-  form textarea {
+  #textarea {
     margin-top: 15px;
     height: 70px;
     width: 80%;
@@ -56,23 +56,23 @@
     border-bottom: 1px solid #121619;
     color: black;
   }
-  input::placeholder,
-  textarea::placeholder {
+  #input1::placeholder,
+  #textarea::placeholder {
     font-weight: bold;
     color: grey;
     font-family:'Times New Roman', Times, serif;
   }
-  form input:focus,
+  /* form input:focus,
   textarea:focus {
     outline: none;
   }
-  
-  form label {
+   */
+  #label {
     margin-top: 10px;
     color: whitesmoke;
   }
   
-  form button {
+  #btn101{
     margin-top: 40px;
     width: 140px;
     height: 40px;
@@ -82,7 +82,7 @@
     font-size: 15px;
     cursor: pointer;
   }
-  #input{
+  #input1{
     border-radius: 4px;
     width: 50%;
   }

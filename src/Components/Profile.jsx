@@ -9,7 +9,7 @@ function Profile() {
   const [value, setValue] = React.useState("");
 
   return (
-    <div className="lg:flex lg:flex-row md:flex-col sm:flex-col m-auto lg:w-4/5 sm:w-full lg:justify-center lg:mt-10 md:mt-0 sm:mt-0">
+    <div className="lg:flex lg:flex-row md:flex-col sm:flex-col m-auto lg:w-1/2 sm:w-full lg:justify-center lg:mt-10 md:mt-0 sm:mt-0">
       <div className="g1-card">
         <div className="g1-image-section">
           <img

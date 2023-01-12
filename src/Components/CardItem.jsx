@@ -123,7 +123,7 @@ export default function CardItem() {
                 </div>
                 <div className="ml-4 flex">
                   <Link
-                    to="/card-item/reviews"
+                    to="/cards/card-item/reviews"
                     className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
                   >
                     See all {reviews.totalCount} reviews

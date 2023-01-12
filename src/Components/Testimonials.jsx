@@ -12,7 +12,7 @@ export default function Testimonials() {
             auctor adipiscing nunc urna, sit
           </p>
         </div>
-        <div className="relative mx-auto lg:w-11/12 lg:grid lg:grid-cols-3 grid-rows-3 gap-x-3.5 row-gap-4.5 md:px-6 lg:px-0 md:gap-y-3.5 ">
+        <div className="relative mx-auto lg:w-11/12 lg:grid lg:grid-cols-3 grid-rows-2 gap-x-3.5 row-gap-4.5 md:px-6 lg:px-0 md:gap-y-3.5 ">
           <div id="testimonial" className="bg-gradient-to-r from-teal-500 to-cyan-600 py-12 px-4 sm:px-6 md:flex md:flex-col md:mb-10 md:py-16 md:pl-10 md:pr-10 lg:pr-16">
             <div className="md:flex-shrink-0">
               <img
