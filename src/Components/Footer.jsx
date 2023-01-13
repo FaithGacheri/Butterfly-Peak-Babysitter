@@ -1,109 +1,61 @@
-import React from "react";
-import "../Styles/Footer.css";
-import {
-  FaFacebook,
-  FaMailBulk,
-  FaPhone,
-  FaSearchLocation,
-  FaTwitter,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+import React from 'react'
+import "../Styles/Footer.css"
+import {FaFacebookF} from "react-icons/fa"
+import {FaTwitter} from "react-icons/fa"
+import {FaInstagram} from "react-icons/fa"
+import {FaYoutube} from "react-icons/fa"
+
 const Footer = () => {
   return (
-    <div>
-      <div className="grid grid-cols-2 m-2">
-        <div className="grid grid-cols-2">
-          <div className="flex justify-center">
-            <div className="">
-              <FaSearchLocation
-                size={20}
-                style={{ color: "#ffffff", marginRight: "2rem" }}
-              />
-            </div>
-            <div>
-              <p>Ngong road</p>
-              <h4>Nairobi, Kenya</h4>
-            </div>
-          </div>
+   <div className='footer'>
+      <div className='top'>
+        <div>
+          <h1>Butterfly Peaks Babysitters</h1>
+          <p>Stepping In When You Need To Step Out</p>
+        </div>
+       <div className='footer_socials'>
+        <a href="https://facebook.com"><FaFacebookF/> </a>
+        <a href="https://twitter.com"><FaTwitter/></a>
+        <a href="https://instagram.com"><FaInstagram/></a>
+        <a href="https://youtube.com"><FaYoutube/></a>
+       </div>
+      </div>
 
-          <div>
-            <div className="phone">
-              <h4 className="flex flex-row">
-                <FaPhone
-                  size={20}
-                  style={{ color: "#ffffff", marginRight: "2rem" }}
-                />{" "}
-                <span>+254 725 100 100</span>
-              </h4>
-              <h4 className="flex flex-row">
-                <FaPhone
-                  size={20}
-                  style={{ color: "#ffffff", marginRight: "2rem" }}
-                />
-                <span> +254 730 946 820</span>
-              </h4>
-            </div>
-            <div className="email">
-              <h4 className="flex flex-row">
-                <FaMailBulk
-                  size={20}
-                  style={{ color: "#ffffff", marginRight: "2rem" }}
-                />
-                <span>Bulkbutterflypeaks@gmail.com</span>
-              </h4>
-            </div>
-          </div>
+      <div className='bottom'>
+        <div>
+        <a href='/'>About us</a>
+          <h4>
+            <p>Location</p>
+            <p>Leadership</p>
+            <p>How to hire</p>
+            <p>Impact stories</p>
+          </h4>
         </div>
 
-        <div className="grid grid-cols-3">
-          <div className="">
-            <h4>About</h4>
-            <p>Impact stories</p>
-            <p>Location</p>
-            <p>How to hire</p>
-          </div>
-
-          <div className="">
-            <h4>People</h4>
+        <div>
+        <a href='/'>People</a>
+          <h4>
             <p>Book your nanny</p>
             <p>Look for opportunity</p>
             <p>Join the community</p>
-          </div>
+          </h4>
+        </div>
 
-          <div className="contacts">
-            <h4>Contact Us</h4>
+        <div>
+        <a href='/'>Contact Us</a>
+          <h4>
             <p>Investors</p>
             <p>Blog</p>
-            <p>Covid 19</p>
-          </div>
-
-          <div className="flex flex-row justify-evenly">
-            <FaFacebook
-              size={30}
-              style={{ color: "#ffffff", marginRight: "1rem" }}
-            />
-            <FaTwitter
-              size={30}
-              style={{ color: "#ffffff", marginRight: "1rem" }}
-            />
-            <FaInstagram
-              size={30}
-              style={{ color: "#ffffff", marginRight: "1rem" }}
-            />
-            <FaYoutube
-              size={30}
-              style={{ color: "#ffffff", marginRight: "1rem" }}
-            />
-           
-          </div>
+            <p>Covid19</p>
+            <p>butterflypeaks@gmail.com</p>
+          </h4>
         </div>
       </div>
-    <div>
-         <p> &copy; 2023 butterflypeaks.com</p>
-    </div>
-    </div>
-  );
-};
+      <div className='coppyright'>
+      <p> &copy; 2023 butterflypeaksbabysitters.com</p>
+      </div>
+   </div>
+  )
+}
 
-export default Footer;
+export default Footer
