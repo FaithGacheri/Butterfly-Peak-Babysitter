@@ -35,7 +35,7 @@ function App() {
       <Route path="blog3" element={<Blog3/>} />
     </Route>
     <Route path="userprofile" element={<ParentProfile/>}/>
-    <Route path="/contact" element={<Contact/>} />
+    <Route path="/contact_us" element={<Contact/>} />
     <Route path="/login" element={<Login/>} />
     <Route path='/login/forgot_password' element={<ForgotPasswordForm/>}/>
     <Route path="/sign_up" element={<Signup/>} />
