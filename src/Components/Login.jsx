@@ -10,6 +10,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   // console.log(error)
+  console.log(checkbox)
   // const authentication=error.join("").includes("Invalid username or passsword")
   console.log(checkbox);
   const toastMessage = () => {
@@ -32,11 +33,10 @@ export default function Login() {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((user) => user);
-          toastMessage();
+          r.json().then(() =>
           setTimeout(() => {
-            navigate("/checkbox");
-          }, 1000);
+            navigate("/caregiver");
+          }, 1000));
         } else {
           r.json().then((err) => setError(err.error));
         }

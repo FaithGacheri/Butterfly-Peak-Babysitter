@@ -20,6 +20,7 @@ import Checkout from './Components/Checkout'
 import CheckoutstatusPage from "./Components/CheckoutStatusPage";
 import ParentProfile from './Components/Profile'
 import CaregiverReviewsPage from './Components/CaregiverReviewsPage'
+import CaregiverPage from './Components/CaregiverPage';
 
 function App() {
   const [data, setData] = useState([]);
@@ -41,6 +42,7 @@ console.log(data)
     <Route path="/" element={<Home/>} />
     <Route path="/about" element={<About/>} />
     <Route path="/blog" element={<Blog/>} />
+    <Route path='/caregiver' element={<CaregiverPage/>} />
     <Route path="blog">
       <Route path="blog1" element={<Blog1/>} />
       <Route path="blog2" element={<Blog2/>} />
