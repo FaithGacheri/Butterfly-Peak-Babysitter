@@ -5,7 +5,7 @@ import Service from './Service';
 import Testimonials from './Testimonials';
 import Footer from './Footer';
 import Contact from './Contact'
-
+import CaregiverPage from './CaregiverPage';
 function Home() {
   return (
     <div>
@@ -104,7 +104,7 @@ function Home() {
      
         <Service/>
         <Testimonials/>
-       
+        <CaregiverPage/>
         <Contact/>
         <Footer/>
     </div>
