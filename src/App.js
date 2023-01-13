@@ -1,4 +1,4 @@
-
+import React,{useState, useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './Components/NavBar';
@@ -12,7 +12,7 @@ import ForgotPasswordForm from './Components/ForgotPasswordForm'
 import Blog1 from './Components/Blog1';
 import Blog2 from './Components/Blog2';
 import Blog3 from './Components/Blog3';
-import AvailableNannys from "./Components/AvailableNannys";
+import Cards from "./Components/Cards";
 import Favourite from "./Components/Favourite";
 import Caregiver from "./Components/CaregiverForm";
 import CardItem from './Components/CardItem'
@@ -22,6 +22,18 @@ import ParentProfile from './Components/Profile'
 import CaregiverReviewsPage from './Components/CaregiverReviewsPage'
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`/caregivers`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      });
+  }, []);
+
+console.log(data)
   return (
   <div >
   <NavBar/>
@@ -41,7 +53,7 @@ function App() {
     <Route path="/sign_up" element={<Signup/>} />
     <Route exact path="/">
           <Route exact path="/checkout" element={<Checkout />} />
-          <Route exact path="/cards" element={<AvailableNannys />} />
+          <Route exact path="/cards" element={<Cards data={data}/>} />
           <Route exact path="/favourite" element={<Favourite />} />
         </Route>
         <Route path="sign_up">
