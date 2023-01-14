@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
-export default function Login() {
+export default function Login({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState([]);
@@ -10,7 +10,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   // console.log(error)
-  console.log(checkbox)
+  console.log(checkbox);
   // const authentication=error.join("").includes("Invalid username or passsword")
   console.log(checkbox);
   const toastMessage = () => {
@@ -33,10 +33,10 @@ export default function Login() {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then(() =>
-          setTimeout(() => {
-            navigate("/caregiver");
-          }, 1000));
+          r.json().then((user) =>setUser(user));
+            setTimeout(() => {
+              navigate("/caregiver");
+            }, 1000);
         } else {
           r.json().then((err) => setError(err.error));
         }
@@ -52,7 +52,7 @@ export default function Login() {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((user) => user);
+          r.json().then((user) => setUser(user));
           toastMessage();
           setTimeout(() => {
             navigate("/cards");

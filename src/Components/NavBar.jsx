@@ -6,8 +6,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar() {
-  const [loggedIn, setLoggedIn]=useState(true)
+export default function NavBar({user}) {
+  // const [loggedIn, setLoggedIn]=useState(true)
   return (
     <div>
       <div className="relative ">
@@ -58,7 +58,7 @@ export default function NavBar() {
                   </Link>
                 </div>
               </div>
-             {loggedIn?( <div className="hidden md:flex md:items-center md:space-x-6">
+             {user?(null):( <div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
                   to="/login"
                   className="text-base font-medium text-white hover:text-gray-300"
@@ -71,8 +71,8 @@ export default function NavBar() {
                 >
                   Sign Up
                 </Link>
-              </div>):(null)}
-              {loggedIn? (<div className="hidden sm:ml-6 sm:block">
+              </div>)}
+              {user? (<div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
