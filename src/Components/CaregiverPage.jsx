@@ -3,10 +3,7 @@ import "../Styles/CaregiverPage.css";
 function CaregiverPage() {
   const [click, setClick] = useState(false);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch({});
-  }
+
   return (
     <>
       <div className="c-page">
