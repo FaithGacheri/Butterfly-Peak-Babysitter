@@ -28,7 +28,7 @@ export default function Signup({ onLogin }) {
   function handleSubmit(e) {
     e.preventDefault();
     // setErrors([]);
-    fetch("signup_caregiver", {
+    fetch("/signup_parent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
