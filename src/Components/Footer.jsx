@@ -46,7 +46,6 @@ const Footer = () => {
           <h4>
             <p>Investors</p>
             <p>Blog</p>
-            <p>Covid19</p>
             <p>butterflypeaks@gmail.com</p>
           </h4>
         </div>
