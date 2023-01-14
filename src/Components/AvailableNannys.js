@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState} from "react";
+import { Link} from "react-router-dom";
 import { StarIcon } from "@heroicons/react/20/solid";
 import "../Styles/Cards.css";
 import "../Styles/TestFile.css";
@@ -8,9 +8,8 @@ export default function AvailableNannys({ data }) {
   // const [card, setCard] = useState(0);
   const [isShown, setIsShown] = useState(false);
   // const [individualCaregiver, setIndividualCaregiver] = useState(0);
-  // let params = useParams();
-  // console.log(card);
-  console.log(data);
+   // console.log(card);
+  // console.log(data);
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
@@ -41,7 +40,7 @@ export default function AvailableNannys({ data }) {
   // }
   const reviews = data.reviews.map((rating) => rating.ratings);
   const individualReviews = reviews.reduce((a, b) => a + b, 0) / reviews.length;
-  console.log(individualReviews);
+  // console.log(individualReviews);
   return (
     <div
       onMouseEnter={() => setIsShown(true)}
@@ -54,7 +53,7 @@ export default function AvailableNannys({ data }) {
             <img
               className=" lg:h-64 lg:w-full lg:max-w-full md:h-48 md:w-full"
               src={data.image.image1}
-              alt="Image not found"
+              alt="Image_not_found"
             />
             <figcaption>
               <h2>
@@ -107,7 +106,7 @@ export default function AvailableNannys({ data }) {
           </div>
           {isShown ? (
             <div className="flex justify-center pt-10">
-              <Link to="/cards/card-item">
+              <Link to={`/cards/${data.id}`}>
                 <button className="w-full p-3 rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                   View More
                 </button>
