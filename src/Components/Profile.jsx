@@ -4,7 +4,8 @@ import "../Styles/Profile.css";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
-function Profile() {
+function Profile({ user }) {
+  console.log(user.parent.username)
   const [clicked, setClicked] = useState(false);
   const [value, setValue] = React.useState("");
 
@@ -37,10 +38,12 @@ function Profile() {
             <h2 className="lg:text-3xl border-b pb-4">Personal Info</h2>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Full name</h3>
-              <h3 className="mr-20">James Muiruri</h3>
+              <h3 className="mr-20">{user.parent.username}</h3>
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Email </h3>
+              <h3 className="mr-20">{user.parent.email}</h3>
+
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Phone Number </h3>
@@ -174,9 +177,9 @@ function Profile() {
               </div>
             </div>
             <div className="flex justify-end">
-            <button className="mt-8 flex w-1/4 items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-              Submit
-            </button>
+              <button className="mt-8 flex w-1/4 items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                Submit
+              </button>
             </div>
           </form>
         ) : null}

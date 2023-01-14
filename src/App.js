@@ -18,13 +18,14 @@ import Caregiver from "./Components/CaregiverForm";
 import CardItem from './Components/CardItem'
 import Checkout from './Components/Checkout'
 import CheckoutstatusPage from "./Components/CheckoutStatusPage";
-import ParentProfile from './Components/Profile'
+import Profile from './Components/Profile'
 import CaregiverReviewsPage from './Components/CaregiverReviewsPage'
 import CaregiverPage from './Components/CaregiverPage';
 
 function App() {
   const [data, setData] = useState([]);
-
+  const [user, setUser] =useState(null);
+console.log(user)
   useEffect(() => {
     fetch(`/caregivers`)
       .then((res) => res.json())
@@ -37,7 +38,7 @@ function App() {
 console.log(data)
   return (
   <div >
-  <NavBar/>
+  <NavBar user={user}/>
   <Routes>
     <Route path="/" element={<Home/>} />
     <Route path="/about" element={<About/>} />
@@ -48,14 +49,14 @@ console.log(data)
       <Route path="blog2" element={<Blog2/>} />
       <Route path="blog3" element={<Blog3/>} />
     </Route>
-    <Route path="userprofile" element={<ParentProfile/>}/>
+    <Route path="userprofile" element={<Profile user={user}/>}/>
     <Route path="/contact_us" element={<Contact/>} />
-    <Route path="/login" element={<Login/>} />
+    <Route path="/login" element={<Login setUser={setUser}/>} />
     <Route path='/login/forgot_password' element={<ForgotPasswordForm/>}/>
     <Route path="/sign_up" element={<Signup/>} />
     <Route exact path="/">
           <Route exact path="/checkout" element={<Checkout />} />
-          <Route exact path="/cards" element={<Cards data={data}/>} />
+          <Route exact path="/cards" element={<Cards data={data} user={user}/>} />
           <Route exact path="/favourite" element={<Favourite />} />
         </Route>
         <Route path="sign_up">
