@@ -5,42 +5,14 @@ import "../Styles/Cards.css";
 import "../Styles/TestFile.css";
 
 export default function AvailableNannys({ data }) {
-  // const [card, setCard] = useState(0);
   const [isShown, setIsShown] = useState(false);
-  // const [individualCaregiver, setIndividualCaregiver] = useState(0);
-   // console.log(card);
-  // console.log(data);
+
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-  // console.log(params);
-  // const nanny = useEffect(() => {
-  //   fetch(`caregivers/${params}`)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       // set the individual data here
-  //     });
-  // }, [params]);
-
-  // function favouritenanny(data) {
-  //   fetch(`http://localhost:3000/favouriteNannys`, {
-  //     method: "POST",
-  //     headers: { "content-type": "application/json" },
-  //     body: JSON.stringify({
-  //       name: data.name,
-  //       nannyLocation: data.nannyLocation,
-  //       rating: data.rating,
-  //       nannyPrice: data.nannyPrice,
-  //       nanny_url: data.nanny_url,
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data))
-  //     .catch((err) => console.error(err.message));
-  // }
+ 
   const reviews = data.reviews.map((rating) => rating.ratings);
   const individualReviews = reviews.reduce((a, b) => a + b, 0) / reviews.length;
-  // console.log(individualReviews);
   return (
     <div
       onMouseEnter={() => setIsShown(true)}
@@ -99,7 +71,6 @@ export default function AvailableNannys({ data }) {
 
             <button
               className="p-3 text-center fav-button"
-              // onClick={() => favouritenanny(data)}
             >
               Favourite
             </button>
