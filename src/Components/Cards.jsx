@@ -6,10 +6,10 @@ export default function Cards() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`/caregivers`)
+    fetch('/caregivers')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);
