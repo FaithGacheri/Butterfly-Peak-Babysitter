@@ -47,9 +47,11 @@ function Profile({ user }) {
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Phone Number </h3>
+              <h3 classname="mr-20">{user.parent.phonenumber}</h3>
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Address </h3>
+              <h3 className="mr-20">{user.parent.adress}</h3>
             </div>
           </div>
           <div className="flex justify-end">
