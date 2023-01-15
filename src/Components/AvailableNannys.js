@@ -51,6 +51,24 @@ export default function AvailableNannys() {
       .catch((err) => console.error(err.message));
   }
 
+  // function bookNanny(data) {
+  //   fetch(`/booked`, {
+  //     method: "POST",
+  //     headers: { "content-type": "application/json" },
+  //     body: JSON.stringify({
+  //       name: data.name,
+  //       nannyLocation: data.nannyLocation,
+  //       rating: data.rating,
+  //       nannyPrice: data.nannyPrice,
+  //       nanny_url: data.nanny_url,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  //     .catch((err) => console.error(err.message));
+  // }
+
+
   const nanny = nannyData.map((data) => (
     <div>
       <div className="bg-gray-900 flex flex-col justify-center">
@@ -91,7 +109,9 @@ export default function AvailableNannys() {
         <div className="extra content">
           <span>
             <div className="flex flex-row justify-between h-10 pl-4 pr-4">
-              <button className="w-1/4 p-1 rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              <button className="w-1/4 p-1 rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              // onClick={() => bookNanny(data)}
+              >
                 Book Now
               </button>
 
