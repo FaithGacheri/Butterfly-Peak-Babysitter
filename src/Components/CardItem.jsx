@@ -8,6 +8,7 @@ export default function CardItem() {
   const [reviews, setReviews] = useState([]);
   const [images, setImages]=useState({})
   const [status, setStatus]=useState(null)
+  console.log(id)
   useEffect(() => {
     fetch(`/caregivers/${id}`)
       .then((r) => r.json())
@@ -20,11 +21,13 @@ export default function CardItem() {
       });
   }, []);
 
+  console.log(nanny)
+  console.log(reviews)
   const r = reviews.map((rating) => rating.ratings);
 
   return (
     <>
-      <Card nanny={nanny} r={r} images={images}/>
+      <Card nanny={nanny} r={r} images={images} status={status}/>
     </>
   );
 }
