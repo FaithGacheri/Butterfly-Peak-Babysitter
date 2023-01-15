@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Link, useNavigate } from "react-router-dom";
-import DateTime from "./DateTime";
+import dayjs from 'dayjs';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+
 const caregiver = {
   name: "Naomi Small",
   price: "Ksh 3500",
@@ -76,15 +82,26 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Card({ r, nanny, images }) {
-  console.log(images.image1);
+export default function Card({ r, nanny, images, status }) {
+  // console.log(status);
+  // console.log(images.image1);
   const [clicked, setClicked] = useState(false);
+  const [startTime, setStartTime] =useState(dayjs(new Date()));
+  const [endTime, setEndTime]=useState(dayjs(new Date()));
+
   const nav = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
+    fetch('/bookings',{
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json'
+      }
+    })
     nav("/checkout");
   }
-
+console.log(startTime)
+console.log(endTime)
   const ratings = parseFloat(
     (r.reduce((a, b) => a + b, 0) / r.length).toFixed(1)
   );
@@ -146,14 +163,14 @@ export default function Card({ r, nanny, images }) {
                 <h2 className="text-sm font-medium text-gray-900 lg:text-2xl pt-6">
                   Status
                 </h2>
-                {nanny.is_booked ? (
-                  <button className="bg-green-400 mt-2 flex w-1/2 items-center justify-center rounded-md border border-transparent py-3 text-base font-medium text-black">
-                    Available for Hire
-                  </button>
-                ) : (
+                {status ? (
                   <p className="text-sm font-medium text-red-600 lg:text-2xl pt-2">
                     Sorry‼️ {nanny.name} is unavailable
                   </p>
+                ) : (
+                  <button className="bg-green-400 mt-2 flex w-1/2 items-center justify-center rounded-md border border-transparent py-3 text-base font-medium text-black">
+                    Available for Hire
+                  </button>
                 )}
               </div>
             </div>
@@ -215,15 +232,44 @@ export default function Card({ r, nanny, images }) {
                 </ul>
               </div>
             </div>
-            {caregiver.status ? (
+            {status ? null : (
               <div>
                 {clicked ? (
                   <form onSubmit={handleSubmit}>
                     <>
                       <p className="text-lg text-sm font-medium text-red-600 lg:text-2xl pt-6 pb-6">
-                        Select the Date and Time
+                        Select Start and End Time
                       </p>
-                      <DateTime required />
+                      <div className="flex flex-col m-auto justify-between">
+                        <div className="w-1/2 mb-4">
+                          <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <Stack spacing={3}>
+                              <DateTimePicker
+                                label="Date&Time picker"
+                                value={startTime}
+                                onChange={(e)=>setStartTime(e.target.value)}
+                                renderInput={(params) => (
+                                  <TextField {...params} />
+                                )}
+                              />
+                            </Stack>
+                          </LocalizationProvider>{" "}
+                        </div>
+                        <div className="w-1/2 mt-4">
+                          <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <Stack spacing={3}>
+                              <DateTimePicker
+                                label="Date&Time picker"
+                                value={endTime}
+                                onChange={(e)=>setEndTime(e.target.value)}
+                                renderInput={(params) => (
+                                  <TextField {...params} />
+                                )}
+                              />
+                            </Stack>
+                          </LocalizationProvider>{" "}
+                        </div>
+                      </div>
                       <button
                         type="submit"
                         className="mt-8 flex w-1/2 items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -242,7 +288,7 @@ export default function Card({ r, nanny, images }) {
                   </button>
                 )}
               </div>
-            ) : null}
+            )}
           </div>
         </div>
 
