@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import jwtDecode from "jwt-decode";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
@@ -16,7 +17,6 @@ import Cards from "./Components/Cards";
 import Favourite from "./Components/Favourite";
 import Caregiver from "./Components/CaregiverForm";
 import CardItem from "./Components/CardItem";
-import Checkout from "./Components/Checkout";
 import CheckoutstatusPage from "./Components/CheckoutStatusPage";
 import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
@@ -25,7 +25,7 @@ import CaregiverPage from "./Components/CaregiverPage";
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
-  console.log(user);
+  console.log(user)
   useEffect(() => {
     fetch(`/caregivers`)
       .then((res) => res.json())
@@ -35,7 +35,6 @@ function App() {
       });
   }, []);
 
-  console.log(data);
   return (
     <div>
       <NavBar user={user} />
@@ -55,7 +54,6 @@ function App() {
         <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route exact path="/">
-          <Route exact path="/checkout" element={<Checkout />} />
           <Route
             exact
             path="/cards"
@@ -72,9 +70,9 @@ function App() {
           </Route>
         </Route>
 
-        <Route exact path="cards/:id" element={<CardItem />} />
+        <Route exact path="cards/:id" element={<CardItem user={user} />} />
 
-        <Route path="checkout">
+        <Route path="cards/:id">
           <Route path="checkout_status" element={<CheckoutstatusPage />} />
         </Route>
       </Routes>
