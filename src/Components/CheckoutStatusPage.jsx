@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function CheckoutstatusPage() {
+export default function CheckoutstatusPage({user}) {
+  const [caregiver, setCaregiver]=useState([])
+  console.log(user.parent.id)
+  useEffect(()=>{
+    fetch(`/caregivers/booked_by_parent/${user.parent.id}`)
+    .then(r=>r.json())
+    .then(data=>{
+      console.log(data)
+      setCaregiver(data)
+    })
+  },[])
   const [click, setClick] = useState(false);
   return (
     <div className="lg:w-2/3 xl:w-1/2 m-auto sm:w-full pt-0 mt-0 pb-20 mb-20">

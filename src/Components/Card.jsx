@@ -67,23 +67,13 @@ const reviews = {
     },
   ],
 };
-const relatedProducts = [
-  {
-    id: 1,
-    name: "James Woods",
-    href: "#",
-    imageSrc:
-      "https://images.pexels.com/photos/6213183/pexels-photo-6213183.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    imageAlt: "Front of men's Basic Tee in white.",
-    price: "Ksh 5500",
-  },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Card({ r, nanny, images, status, user }) {
+export default function Card({ r, nanny, images, status, user, data }) {
+  console.log(data)
   const [clicked, setClicked] = useState(false);
   const [startTime, setStartTime] = useState(dayjs(new Date()));
   const [endTime, setEndTime] = useState(dayjs(new Date()));
@@ -92,14 +82,15 @@ export default function Card({ r, nanny, images, status, user }) {
   const [processing, setProcessing] = useState(false);
   const [checkpage, setCheckPage] = useState(false);
 
-let date1 = dayjs(startTime);
-console.log(user.parent)
+  let date1 = dayjs(startTime);
   let startDate = date1.format("YYYY-MM-DD HH:mm:ss");
-  // console.log(startDate);
   let date2 = dayjs(startTime);
   let endDate = date2.format("YYYY-MM-DD HH:mm:ss");
-  // console.log(endDate);
   const nav = useNavigate();
+
+  const relatedProducts=data.slice(Math.max(data.length -3, 0))
+  
+
   function handleSubmit(event) {
     event.preventDefault();
     fetch("/bookings", {
@@ -126,7 +117,6 @@ console.log(user.parent)
   const ratings = parseFloat(
     (r.reduce((a, b) => a + b, 0) / r.length).toFixed(1)
   );
-  //   console.log(ratings)
   return (
     <>
       {checkpage ? (
@@ -172,10 +162,12 @@ console.log(user.parent)
                         </Dialog.Title>
                         <div className="mt-2">
                           <p className="text-sm text-gray-500">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Eius aliquam laudantium explicabo pariatur
-                            iste dolorem animi vitae error totam. At sapiente
-                            aliquam accusamus facere veritatis.
+                            Thank you for choosing BbCare, we are glad to inform
+                            you that we have received your appointment. We will
+                            inform you once the caregiver has accepted your
+                            request. You can proceed to check the status.
+                            <br></br>
+                            Thank you!😊
                           </p>
                         </div>
                       </div>
@@ -185,7 +177,7 @@ console.log(user.parent)
                         type="button"
                         className="inline-flex w-full justify-center rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 px-4 py-2 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm"
                       >
-                        <Link to="/checkout/checkout_status">Check Status</Link>
+                        <Link to="/checkout_status">Check Status</Link>
                       </button>
 
                       <button
@@ -520,7 +512,7 @@ console.log(user.parent)
                   <div key={relatedProduct.id} className="group relative">
                     <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none lg:h-80">
                       <img
-                        src={relatedProduct.imageSrc}
+                        src={relatedProduct.image.image1}
                         alt={relatedProduct.imageAlt}
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                       />
@@ -533,15 +525,15 @@ console.log(user.parent)
                               aria-hidden="true"
                               className="absolute inset-0"
                             />
-                            {relatedProduct.name}
+                            {relatedProduct.username}
                           </a>
                         </h3>
                         <p className="mt-1 text-sm text-gray-500">
-                          {relatedProduct.color}
+                          {relatedProduct.location.city}
                         </p>
                       </div>
                       <p className="text-sm font-medium text-gray-900">
-                        Price Tag:{relatedProduct.price}
+                        Price Tag:{relatedProduct.hourly}
                       </p>
                     </div>
                   </div>
