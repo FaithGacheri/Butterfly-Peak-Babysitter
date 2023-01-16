@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='coppyright'>
-      <p> &copy; 2023 butterflypeaksbabysitters.com</p>
+      <p id='copy'> &copy; 2023 butterflypeaksbabysitters.com</p>
       </div>
    </div>
   )
