@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const DropDownBar = ({Change}) =>{
     
@@ -11,7 +11,7 @@ const DropDownBar = ({Change}) =>{
         <option value="Nairobi">Nairobi</option>
         <option value="Kajiado">Kajiado</option>
         <option value="Machakos" selected>Machakos</option>
-        <option value="Kiambu" selected>Kiambu</option>
+        <option value="Kiambu" selected>Kiambur</option>
       </select>
     </div>
   );
