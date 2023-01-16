@@ -44,7 +44,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/checkout_status" element={<CheckoutstatusPage user={user} />} />
-        <Route path="/caregiver" element={<CaregiverPage />} />
+        <Route path="/caregiver" element={<AppointmentTable user={user}/>} />
+        <Route path="caregiver">
+          <Route path="bookings" element={<CaregiverPage/>}/>
+        </Route>
         <Route path="blog">
           <Route path="blog1" element={<Blog1 />} />
           <Route path="blog2" element={<Blog2 />} />
