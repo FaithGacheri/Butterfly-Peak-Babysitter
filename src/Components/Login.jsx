@@ -32,6 +32,8 @@ export default function Login() {
     .then(r=>{
       if(r.ok){
         r.json().then((user) =>(user))
+        localStorage.setItem("token",user.token)
+        localStorage.setItem("user_id",user.user.id)
         toastMessage()
         setTimeout(() => {
             navigate("/cards")
