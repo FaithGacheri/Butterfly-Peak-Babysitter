@@ -21,6 +21,7 @@ import CheckoutstatusPage from "./Components/CheckoutStatusPage";
 import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
+import AppointmentTable from './Components/AppointmentTable';
 
 function App() {
   const [data, setData] = useState([]);

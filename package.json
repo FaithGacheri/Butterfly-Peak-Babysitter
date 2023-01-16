@@ -9,6 +9,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@headlessui/react": "^1.7.6",
     "@heroicons/react": "^2.0.13",
+<<<<<<< HEAD
+    "@material-ui/core": "^4.12.4",
+=======
+>>>>>>> 50cfae1eaecc6fc9a7b5665038ebbb0b0cfd1717
     "@mui/material": "^5.11.4",
     "@mui/x-date-pickers": "^5.0.11",
     "@testing-library/jest-dom": "^5.16.5",
