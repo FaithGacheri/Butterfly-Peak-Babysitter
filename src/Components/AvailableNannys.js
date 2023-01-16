@@ -86,11 +86,7 @@ export default function AvailableNannys({ data }) {
               </button>
               <button className="p-3 text-center fav-button"
               onClick={favouritenanny(data)}
-              >Favourite</button><button
-              className="p-3 text-center fav-button"
-            >
-              Favourite
-            </button>
+              >Favourite</button>
             </div>
             {isShown ? (
               <div className="flex justify-center pt-10">
