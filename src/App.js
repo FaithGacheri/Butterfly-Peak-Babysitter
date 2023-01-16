@@ -22,6 +22,7 @@ import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
 import AppointmentTable from './Components/AppointmentTable';
+import DropDownBar from "./Components/DropDownBar";
 
 function App() {
   const [data, setData] = useState([]);
@@ -64,6 +65,7 @@ function App() {
             element={<Cards data={data} user={user} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
+          <Route exact path="/dropdown" element={<DropDownBar />} />
         </Route>
         <Route path="sign_up">
           <Route path="caregiver" element={<Caregiver />} />
