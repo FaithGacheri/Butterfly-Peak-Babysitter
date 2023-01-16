@@ -6,8 +6,24 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar({user}) {
+
+export default function NavBar() {
+  const [loggedIn, setLoggedIn]=useState(true)
+  const token=localStorage.getItem("token")
+
+  function logOut(){
+    fetch("/logout",{
+      method:"DELETE",
+      headers:{
+        "Content-Type":"application/json"
+      }
+    })
+    localStorage.removeItem("token")
+  }
+
+
   // const [loggedIn, setLoggedIn]=useState(true)
+
   return (
     <div>
       <div className="relative ">
@@ -118,7 +134,7 @@ export default function NavBar({user}) {
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
-                              Settings
+                              Settings5
                             </Link>
                           )}
                         </Menu.Item>
@@ -130,6 +146,8 @@ export default function NavBar({user}) {
                                 active ? 'bg-gradient-to-r from-teal-500 to-cyan-600' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
+                              
+                        onClick={logOut}
                             >
                               Sign out
                             </Link>
