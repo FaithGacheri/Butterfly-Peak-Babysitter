@@ -6,6 +6,7 @@ import "react-phone-number-input/style.css";
 
 function Profile({ user }) {
   console.log(user.parent.username)
+  console.log(user.parent)
   const [clicked, setClicked] = useState(false);
   const [value, setValue] = React.useState("");
 
