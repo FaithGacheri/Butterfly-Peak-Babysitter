@@ -4,10 +4,7 @@ figure.snip0016 {
   color: #fff;
   position: relative;
   overflow: hidden;
-  margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
+  margin: 0px;
   width: 100%;
   background: #000000;
   text-align: left;
@@ -82,6 +79,7 @@ figure.snip0016 a {
 }
 figure.snip0016:hover img {
   opacity: 0.3;
+  
 }
 figure.snip0016:hover figcaption h2 {
   opacity: 1;
@@ -106,10 +104,7 @@ figure.snip0016:hover figcaption::before {
 }
 
 
-/* Demo purposes only */
-html {
-  height: 100%;
-}
+
 /* body {
   background-color: #212121;
   display: flex;

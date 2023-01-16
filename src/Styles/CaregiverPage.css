@@ -1,0 +1,55 @@
+.c-page{
+    /* background-color: red; */
+    display: flex;
+}
+.g22-image-section{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.c-btn{
+    margin-left:230px ;
+    margin-bottom:30px ;
+    margin-top: 10px;
+}
+#acc{
+    font-family:sans-serif ;
+    text-align: none;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 2px;
+    display: inline-block;
+    background-color: #0891b2;
+    padding: 7px;
+    border-radius: 10px;
+}
+#dec{
+    font-family:sans-serif ;
+    text-align: none;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 2px;
+    display: inline-block;
+    background-color: #0891b2;
+    padding: 7px;
+    border-radius:10px;
+    margin-left: 20px;
+}
+#mes{
+    font-family:sans-serif ;
+    text-align: none;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 2px;
+    display: inline-block;
+    background-color: #0891b2;
+    padding: 7px;
+    border-radius:10px;
+    margin-left: 40px;
+}
+#p-page{
+    margin-left: 50px;
+    padding: 20px;
+}
+#n-page{
+    margin: 50px;
+}

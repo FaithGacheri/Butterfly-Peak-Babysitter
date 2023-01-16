@@ -7,7 +7,7 @@ export default function Signup({ onLogin }) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [passwordConfirmation, setPasswordConfirmation] = React.useState("");
-  const [errors, setErrors] = React.useState([]);
+  // const [errors, setErrors] = React.useState([]);
   const navigate = useNavigate();
 
   const showToastMessage = () => {
@@ -16,19 +16,19 @@ export default function Signup({ onLogin }) {
       className: "toast-message",
     });
   };
-  const passwordError = errors
-    .map((err) => err)
-    .filter((a) => a)
-    .includes("Password confirmation doesn't match Password");
-  const usernameError = errors
-    .map((err) => err)
-    .filter((a) => a)
-    .includes("Username has already been taken");
+  // const passwordError = errors
+  //   .map((err) => err)
+  //   .filter((a) => a)
+  //   .includes("Password confirmation doesn't match Password");
+  // const usernameError = errors
+  //   .map((err) => err)
+  //   .filter((a) => a)
+  //   .includes("Username has already been taken");
 
   function handleSubmit(e) {
     e.preventDefault();
-    setErrors([]);
-    fetch("/signup/parent", {
+    // setErrors([]);
+    fetch("/signup_parent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export default function Signup({ onLogin }) {
         }, 1000);
       } else {
         r.json().then((err) => {
-          setErrors(err.errors);
+          // setErrors(err.errors);
         });
       }
     });
@@ -117,7 +117,7 @@ export default function Signup({ onLogin }) {
                   />
                 </div>
               </div>
-              {usernameError ? <div className="flex items-center"><p className="italic text-red-600 justify-center">Username already taken. Try another</p></div> : null}
+              {/* {usernameError ? <div className="flex items-center"><p className="italic text-red-600 justify-center">Username already taken. Try another</p></div> : null} */}
               <div>
                 <label
                   htmlFor="password"
@@ -154,13 +154,13 @@ export default function Signup({ onLogin }) {
                   />
                 </div>
               </div>
-              {passwordError ? (
-                <div className="flex items-center justify-center">
+              {/* {passwordError ? (
+                <div className="flex items-center justify-start">
                   <p className="italic text-red-600">
                     The passwords doesn't match❗
                   </p>
                 </div>
-              ) : null}
+              ) : null} */}
 
               <div>
                 <button
