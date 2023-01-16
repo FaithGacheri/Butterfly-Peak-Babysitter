@@ -34,10 +34,13 @@ export default function Login({ setUser }) {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((user) =>setUser(user));
-            setTimeout(() => {
-              navigate("/caregiver");
-            }, 1000);
+          r.json().then((user) =>{
+            setUser(user)
+            localStorage.setItem('token', user.jwt);
+              setTimeout(() => {
+                navigate("/caregiver");
+              }, 1000);
+          });
         } else {
           r.json().then((err) => setError(err.error));
         }
@@ -53,11 +56,14 @@ export default function Login({ setUser }) {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((user) => setUser(user));
-          toastMessage();
-          setTimeout(() => {
-            navigate("/cards");
-          }, 1000);
+          r.json().then((user) => {
+            localStorage.setItem('token', user.jwt);
+            setUser(user)
+            toastMessage();
+            setTimeout(() => {
+              navigate("/cards");
+            }, 1000);
+          });
         } else {
           r.json().then((err) => setError(err.error));
         }

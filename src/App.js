@@ -25,7 +25,7 @@ import CaregiverPage from "./Components/CaregiverPage";
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
-  console.log(user);
+
   useEffect(() => {
     fetch(`/caregivers`)
       .then((res) => res.json())
