@@ -21,6 +21,7 @@ import CheckoutstatusPage from "./Components/CheckoutStatusPage";
 import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
+import AppointmentTable from './Components/AppointmentTable';
 
 function App() {
   const [data, setData] = useState([]);
@@ -42,7 +43,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/caregiver" element={<CaregiverPage />} />
+        <Route path="/caregiver" element={<AppointmentTable/>} />
+
+        <Route path="/caregiver/status_page" element={<CaregiverPage />} />
+
         <Route path="blog">
           <Route path="blog1" element={<Blog1 />} />
           <Route path="blog2" element={<Blog2 />} />
