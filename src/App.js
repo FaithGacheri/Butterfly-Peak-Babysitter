@@ -26,7 +26,7 @@ import AppointmentTable from './Components/AppointmentTable';
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
-  console.log(user)
+
   useEffect(() => {
     fetch(`/caregivers`)
       .then((res) => res.json())
@@ -43,10 +43,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/caregiver" element={<AppointmentTable/>} />
-
-        <Route path="/caregiver/status_page" element={<CaregiverPage />} />
-
+        <Route path="/checkout_status" element={<CheckoutstatusPage user={user} />} />
+        <Route path="/caregiver" element={<AppointmentTable user={user}/>} />
+        <Route path="caregiver">
+          <Route path="bookings" element={<CaregiverPage/>}/>
+        </Route>
         <Route path="blog">
           <Route path="blog1" element={<Blog1 />} />
           <Route path="blog2" element={<Blog2 />} />
@@ -61,7 +62,7 @@ function App() {
           <Route
             exact
             path="/cards"
-            element={<Cards data={data} user={user} />}
+            element={<Cards user={user} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
         </Route>
@@ -74,11 +75,8 @@ function App() {
           </Route>
         </Route>
 
-        <Route exact path="cards/:id" element={<CardItem user={user} />} />
+        <Route exact path="cards/:id" element={<CardItem data={data} user={user} />} />
 
-        <Route path="cards/:id">
-          <Route path="checkout_status" element={<CheckoutstatusPage />} />
-        </Route>
       </Routes>
     </div>
   );
