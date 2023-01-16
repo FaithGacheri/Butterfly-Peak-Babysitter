@@ -22,6 +22,7 @@ export default function Login({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     if (checkbox) {
       setError([]);
       fetch("/caregiver_login", {
