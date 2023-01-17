@@ -28,7 +28,7 @@ export default function Signup({ onLogin }) {
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
-    fetch("/signup/parent", {
+    fetch("/signup_parent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -155,7 +155,7 @@ export default function Signup({ onLogin }) {
                 </div>
               </div>
               {passwordError ? (
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-start">
                   <p className="italic text-red-600">
                     The passwords doesn't match❗
                   </p>
