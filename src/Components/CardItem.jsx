@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import { useParams } from "react-router-dom";
 
-export default function CardItem({user}) {
-  console.log(user)
+export default function CardItem({ user, data }) {
   const [nanny, setCaregiver] = useState({});
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
-  const [images, setImages]=useState({})
-  const [status, setStatus]=useState(null)
+  const [images, setImages] = useState({});
+  const [status, setStatus] = useState(null);
+  const [location, setLocation] = useState({});
+
   console.log(id)
   useEffect(() => {
     fetch(`/caregivers/${id}`)
@@ -17,18 +18,26 @@ export default function CardItem({user}) {
         console.log(data);
         setCaregiver(data);
         setReviews(data.reviews);
-        setImages(data.image)
-        setStatus(data.is_booked)
+        setImages(data.image);
+        setStatus(data.is_booked);
+        setLocation(data.location);
       });
   }, []);
 
-  console.log(nanny)
   console.log(reviews)
   const r = reviews.map((rating) => rating.ratings);
 
   return (
     <>
-      <Card nanny={nanny} r={r} images={images} status={status} user={user}/>
+      <Card
+        nanny={nanny}
+        r={r}
+        images={images}
+        status={status}
+        user={user}
+        data={data}
+        location={location}
+      />
     </>
   );
 }
