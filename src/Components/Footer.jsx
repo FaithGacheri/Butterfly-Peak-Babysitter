@@ -4,6 +4,7 @@ import {FaFacebookF} from "react-icons/fa"
 import {FaTwitter} from "react-icons/fa"
 import {FaInstagram} from "react-icons/fa"
 import {FaYoutube} from "react-icons/fa"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -23,7 +24,9 @@ const Footer = () => {
 
       <div className='bottom'>
         <div>
+          <Link to="/about">
         <a href='/'>About us</a>
+        </Link>
           <h4>
             <p>Location</p>
             <p>Leadership</p>
@@ -42,7 +45,7 @@ const Footer = () => {
         </div>
 
         <div>
-        <a href='/'>Contact Us</a>
+        <a href='/contact_us'>Contact Us</a>
           <h4>
             <p>Investors</p>
             <p>Blog</p>
