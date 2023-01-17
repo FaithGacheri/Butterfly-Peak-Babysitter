@@ -49,7 +49,7 @@ const nav=useNavigate()
     <div>
       <div className="relative ">
         <Popover as="header" className="relative">
-          <div className="bg-gray-900 pt-6 items-center pb-4">
+          <div className="bg-slate-400 pt-6 items-center pb-4">
             <nav
               className="relative mx-auto flex w-4/5 items-center justify-between px-4 sm:px-6"
               aria-label="Global"
@@ -58,7 +58,7 @@ const nav=useNavigate()
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link to="/about">
                     <h1 className="font-medium text-white hover:text-gray-300 lg:text-4xl md:text-2xl">
-                      Bb<span className="text-red-600">Care</span>
+                      Bb<span className="text-emerald-800">Care</span>
                     </h1>
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
@@ -71,25 +71,25 @@ const nav=useNavigate()
                 <div className="hidden space-x-8 md:ml-10 md:flex">
                   <Link
                     to="/"
-                    className="text-base font-2xl text-white focus:text-red-600 focus:text-xl hover:text-gray-300"
+                    className="text-base font-2xl text-gray-900 focus:text-red-600 focus:text-xl hover:text-gray-300"
                   >
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-gray-900 hover:text-gray-300"
                   >
                     About Us
                   </Link>
                   <Link
                     to="/contact_us"
-                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-gray-900 hover:text-gray-300"
                   >
                     Contact Us
                   </Link>
                   <Link
                     to="/blog"
-                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-gray-900 hover:text-gray-300"
                   >
                     Blog
                   </Link>
@@ -104,7 +104,7 @@ const nav=useNavigate()
                 </Link>
                 <Link
                   to="/sign_up"
-                  className="bg-gradient-to-r from-teal-500 to-cyan-600 inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
+                  className="bg-emerald-800 inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
                 >
                   Sign Up
                 </Link>
