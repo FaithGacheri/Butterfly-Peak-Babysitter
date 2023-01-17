@@ -9,7 +9,6 @@ function classNames(...classes) {
 
 export default function NavBar() {
   const [loggedIn, setLoggedIn]=useState(true)
-  const token=localStorage.getItem("token")
 
   function logOut(){
     fetch("/logout",{
@@ -18,7 +17,11 @@ export default function NavBar() {
         "Content-Type":"application/json"
       }
     })
-    localStorage.removeItem("token")
+    .then(r=>{
+      if(r.ok){
+        setUser(null)
+      }
+    })
   }
 
 
