@@ -68,7 +68,7 @@ export default function Checkout() {
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 px-4 py-2 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm"
-                  ><Link to='/checkout/checkout_status'>Check Status</Link>
+                  ><Link to='/checkout_status'>Check Status</Link>
                     
                   </button>
                  
