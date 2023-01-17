@@ -62,7 +62,7 @@ function App() {
     <div>
       <NavBar user={user} caregiver={caregiver}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  user={user} caregiver={caregiver} />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/checkout_status" element={<CheckoutstatusPage user={user} />} />
