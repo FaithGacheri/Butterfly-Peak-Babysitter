@@ -21,7 +21,7 @@
     border-radius: 8%;
     align-items: center;
   }
-  @media only screen and (min-width: 650px) {
+  @media only screen and (max-width: 650px) {
   .service{
     padding-top: 50px;
     width: 100%;
