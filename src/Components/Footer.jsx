@@ -35,7 +35,7 @@ const Footer = () => {
           </h4>
         </div>
 
-        <div>
+        <div className='People'>
         <a href='/'>People</a>
           <h4>
             <p>Book your nanny</p>
@@ -44,7 +44,7 @@ const Footer = () => {
           </h4>
         </div>
 
-        <div>
+        <div className='i-Contact'>
         <a href='/contact_us'>Contact Us</a>
           <h4>
             <p>Investors</p>
