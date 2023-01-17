@@ -6,16 +6,22 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-
 export default function NavBar({user,caregiver}) {
   // const [loggedIn, setLoggedIn]=useState(true)
   const token=localStorage.getItem("token")
+
 
   function logOut(){
     fetch("/logout",{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json"
+      }
+    })
+
+    .then(r=>{
+      if(r.ok){
+        setUser(null)
       }
     })
   }
@@ -148,7 +154,7 @@ export default function NavBar({user,caregiver}) {
                               
                         onClick={logOut}
                             >
-                              Sign out
+                              sign out
                             </Link>
                           )}
                         </Menu.Item>
