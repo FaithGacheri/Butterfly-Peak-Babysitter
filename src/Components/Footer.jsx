@@ -46,13 +46,12 @@ const Footer = () => {
           <h4>
             <p>Investors</p>
             <p>Blog</p>
-            <p>Covid19</p>
             <p>butterflypeaks@gmail.com</p>
           </h4>
         </div>
       </div>
       <div className='coppyright'>
-      <p> &copy; 2023 butterflypeaksbabysitters.com</p>
+      <p id='copy'> &copy; 2023 butterflypeaksbabysitters.com</p>
       </div>
    </div>
   )
