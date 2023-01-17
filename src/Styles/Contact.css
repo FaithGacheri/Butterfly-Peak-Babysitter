@@ -1,5 +1,6 @@
 .contact {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     height: 90vh;
     display: flex;
    background-color:rgb(17 24 39 );
@@ -9,10 +10,11 @@
     opacity: 0.5;
     height: 1000px;
     flex: 50%;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size:contain;
-    border-radius: 15%;
+    /* border-radius: 15%; */
+    
   }
   
   .contact .rightSide {

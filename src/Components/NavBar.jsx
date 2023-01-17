@@ -1,29 +1,45 @@
 import { Fragment, useState } from "react";
-import { Popover, Transition, Menu} from "@headlessui/react";
-import { Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Popover, Transition, Menu } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, useNavigate } from "react-router-dom";
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar({user,caregiver}) {
+export default function NavBar({ user, caregiver, setUser, setCaregiver}) {
   // const [loggedIn, setLoggedIn]=useState(true)
-  const token=localStorage.getItem("token")
+const nav=useNavigate()
+
+  function logOut() {
+    if (user) {
+      fetch("/logout", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(r => {
+        if (r.ok) {
+          nav('/')
+          setUser(null)
+        }
+      })
+    } else {
+      fetch("/caregiver/logout", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        .then(r => {
+          if (r.ok) {
+            nav('/')
+            setCaregiver(null)
+          }
+        })
+    }
 
 
-  function logOut(){
-    fetch("/logout",{
-      method:"DELETE",
-      headers:{
-        "Content-Type":"application/json"
-      }
-    })
 
-    .then(r=>{
-      if(r.ok){
-        setUser(null)
-      }
-    })
   }
 
 
@@ -79,7 +95,7 @@ export default function NavBar({user,caregiver}) {
                   </Link>
                 </div>
               </div>
-             {user||caregiver?(null):( <div className="hidden md:flex md:items-center md:space-x-6">
+              {user || caregiver ? (null) : (<div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
                   to="/login"
                   className="text-base font-medium text-white hover:text-gray-300"
@@ -93,7 +109,7 @@ export default function NavBar({user,caregiver}) {
                   Sign Up
                 </Link>
               </div>)}
-              {user||caregiver? (<div className="hidden sm:ml-6 sm:block">
+              {user || caregiver ? (<div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
@@ -151,8 +167,8 @@ export default function NavBar({user,caregiver}) {
                                 active ? 'bg-gradient-to-r from-teal-500 to-cyan-600' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
-                              
-                        onClick={logOut}
+
+                              onClick={logOut}
                             >
                               sign out
                             </Link>
@@ -162,7 +178,7 @@ export default function NavBar({user,caregiver}) {
                     </Transition>
                   </Menu>
                 </div>
-              </div>):(null)}
+              </div>) : (null)}
             </nav>
           </div>
 
@@ -182,7 +198,7 @@ export default function NavBar({user,caregiver}) {
               <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                  <h1 className="font-medium text-black hover:text-gray-300 lg:text-4xl md:text-2xl">
+                    <h1 className="font-medium text-black hover:text-gray-300 lg:text-4xl md:text-2xl">
                       Bb<span className="text-red-600">Care</span>
                     </h1>
                   </div>
@@ -239,7 +255,7 @@ export default function NavBar({user,caregiver}) {
                       </Link>
                     </p>
                   </div>
-                  
+
                 </div>
               </div>
             </Popover.Panel>
