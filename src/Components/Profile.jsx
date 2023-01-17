@@ -4,8 +4,8 @@ import "../Styles/Profile.css";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
-function Profile({ user }) {
-  console.log(user.parent.username)
+function Profile({ user,caregiver }) {
+
   const [clicked, setClicked] = useState(false);
   const [value, setValue] = React.useState("");
 
@@ -38,18 +38,18 @@ function Profile({ user }) {
             <h2 className="lg:text-3xl border-b pb-4">Personal Info</h2>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Full name</h3>
-              <h3 className="mr-20">{user.parent.username}</h3>
+              <h3 className="mr-20">{user.username}</h3>
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
               <h3>Email </h3>
-              <h3 className="mr-20">{user.parent.email}</h3>
+              <h3 className="mr-20">{user.email}</h3>
 
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
-              <h3>Phone Number </h3>
+              <h3>{user.phone} </h3>
             </div>
             <div className="flex justify-between items-center mt-8 border-b">
-              <h3>Address </h3>
+              <h3></h3>
             </div>
           </div>
           <div className="flex justify-end">
