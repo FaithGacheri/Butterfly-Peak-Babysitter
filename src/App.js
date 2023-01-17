@@ -26,6 +26,17 @@ import AppointmentTable from './Components/AppointmentTable';
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
+  const [caregiver, setCaregiver] = useState(null)
+  useEffect(() => {
+    // auto-login
+    fetch("/parent").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          console.log(user)
+          setUser(user)});
+      }
+    });
+  }, []);
 
   useEffect(() => {
     fetch(`/caregivers`)
@@ -35,16 +46,27 @@ function App() {
         setData(data);
       });
   }, []);
+  useEffect(() => {
+    // auto-login
+    fetch("/caregiver").then((r) => {
+      if (r.ok) {
+        r.json().then((caregiver) => {
+          console.log(caregiver)
+          setCaregiver(caregiver)});
+      }
+    });
+  }, []);
+
 
   return (
     <div>
-      <NavBar user={user} />
+      <NavBar user={user} caregiver={caregiver}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/checkout_status" element={<CheckoutstatusPage user={user} />} />
-        <Route path="/caregiver" element={<AppointmentTable user={user}/>} />
+        <Route path="/caregiver" element={<AppointmentTable user={caregiver}/>} />
         <Route path="caregiver">
           <Route path="bookings" element={<CaregiverPage/>}/>
         </Route>
@@ -53,16 +75,16 @@ function App() {
           <Route path="blog2" element={<Blog2 />} />
           <Route path="blog3" element={<Blog3 />} />
         </Route>
-        <Route path="userprofile" element={<Profile user={user} />} />
+        <Route path="userprofile" element={<Profile user={user} caregiver={caregiver} />} />
         <Route path="/contact_us" element={<Contact />} />
-        <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/login" element={<Login setUser={setUser} setCaregiver={setCaregiver} />} />
         <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route exact path="/">
           <Route
             exact
             path="/cards"
-            element={<Cards user={user} />}
+            element={<Cards user={user} data={data} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
         </Route>
