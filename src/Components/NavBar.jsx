@@ -149,7 +149,7 @@ export default function NavBar() {
                               
                         onClick={logOut}
                             >
-                              Sign out
+                              sign out
                             </Link>
                           )}
                         </Menu.Item>
