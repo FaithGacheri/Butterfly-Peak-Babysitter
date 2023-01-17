@@ -9,45 +9,6 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { Dialog, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/24/outline";
-const caregiver = {
-  name: "Naomi Small",
-  price: "Ksh 3500",
-  images: [
-    {
-      id: 1,
-      imageSrc:
-        "https://images.pexels.com/photos/6970499/pexels-photo-6970499.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      imageAlt: "Back of women's Basic Tee in black.",
-      primary: true,
-    },
-    {
-      id: 2,
-      imageSrc:
-        "https://images.pexels.com/photos/6970515/pexels-photo-6970515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      imageAlt: "Side profile of women's Basic Tee in black.",
-      primary: false,
-    },
-    {
-      id: 3,
-      imageSrc:
-        "https://images.pexels.com/photos/6970114/pexels-photo-6970114.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      imageAlt: "Front of women's Basic Tee in black.",
-      primary: false,
-    },
-  ],
-  location: ["Kitengela"],
-  status: true,
-  description: `
-      <p>Iam an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit.</p>
-      <p>Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
-    `,
-  Experience: [
-    "One year at Kilimani nannies association",
-    "6-Months experience at Kitengela mums",
-    "Assistant manager at mums for care foundation ",
-    "3months experience at Kikuyu Nannies ltd",
-  ],
-};
 
 const reviews = {
   average: 3.9,
@@ -72,8 +33,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Card({ r, nanny, images, status, user, data }) {
+export default function Card({ r, nanny, images, status, user, data,location }) {
   console.log(data)
+  console.log(nanny)
   const [clicked, setClicked] = useState(false);
   const [startTime, setStartTime] = useState(dayjs(new Date()));
   const [endTime, setEndTime] = useState(dayjs(new Date()));
@@ -90,7 +52,6 @@ export default function Card({ r, nanny, images, status, user, data }) {
 
   const relatedProducts=data.slice(Math.max(data.length -3, 0))
   
-
   function handleSubmit(event) {
     event.preventDefault();
     fetch("/bookings", {
@@ -102,7 +63,7 @@ export default function Card({ r, nanny, images, status, user, data }) {
         start_time: startDate,
         end_time: endDate,
         caregiver_id: nanny.id,
-        parent_id: user.parent.id,
+        parent_id: user.id,
       }),
     }).then((r) => {
       if (r.ok) {
@@ -113,7 +74,7 @@ export default function Card({ r, nanny, images, status, user, data }) {
       }
     });
   }
-
+console.log(user)
   const ratings = parseFloat(
     (r.reduce((a, b) => a + b, 0) / r.length).toFixed(1)
   );
@@ -202,10 +163,10 @@ export default function Card({ r, nanny, images, status, user, data }) {
               <div className="lg:col-span-5 lg:col-start-8">
                 <div className="flex justify-between">
                   <h1 className="text-2xl font-medium text-gray-900">
-                    {nanny.username}
+                    
                   </h1>
                   <p className="text-xl font-medium text-gray-900">
-                    Price Tag: {nanny.price}/hr
+                    Price Tag: {nanny.hourly_rate}/hr
                   </p>
                 </div>
                 {/* Reviews */}
@@ -250,7 +211,7 @@ export default function Card({ r, nanny, images, status, user, data }) {
                       Location
                     </h2>
                     <li className="mt-1 text-sm text-gray-500">
-                      {caregiver.location}
+                      {location.city}, {location.town}
                     </li>
                   </div>
                   <div>
@@ -273,15 +234,15 @@ export default function Card({ r, nanny, images, status, user, data }) {
               {/* Image gallery */}
               <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0 lg:mb-0">
                 <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8">
-                  <div className="lg:col-span-4 lg:row-span-4">
-                    <img src={images.image1} alt="Primary" />
+                  <div className="lg:col-span-4 lg:row-span-4 object-fit">
+                    <img className="" src={images.image1} alt="Primary" />
                   </div>
-                  <div className="hidden rounded-lg lg:grid grid-cols 2">
+                  <div className="hidden rounded-lg lg:grid grid-cols-2 lg:col-span-4 ">
                     <div>
                       <img src={images.image2} alt="image_2" />
                     </div>
                     <div>
-                      <img src={images.image3} alt="Image_1" />
+                      <img className="" src={images.image3} alt="Image_1" />
                     </div>
                   </div>
                   {/* {caregiver.images.map((image) => (
@@ -320,9 +281,7 @@ export default function Card({ r, nanny, images, status, user, data }) {
 
                   <div className="prose prose-sm mt-4 text-gray-500">
                     <ul>
-                      {caregiver.Experience.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
+                      <li>{nanny.experience }</li>
                     </ul>
                   </div>
                 </div>

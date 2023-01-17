@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
-export default function Login({ setUser }) {
+export default function Login({ setUser,setCaregiver }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState([]);
@@ -35,8 +35,8 @@ export default function Login({ setUser }) {
       }).then((r) => {
         if (r.ok) {
           r.json().then((user) =>{
-            setUser(user)
-            localStorage.setItem('token', user.jwt);
+            setCaregiver(user)
+            // localStorage.setItem('token', user.jwt);
               setTimeout(() => {
                 navigate("/caregiver");
               }, 1000);
@@ -57,7 +57,6 @@ export default function Login({ setUser }) {
       }).then((r) => {
         if (r.ok) {
           r.json().then((user) => {
-            localStorage.setItem('token', user.jwt);
             setUser(user)
             toastMessage();
             setTimeout(() => {

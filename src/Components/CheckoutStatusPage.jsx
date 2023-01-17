@@ -5,7 +5,7 @@ export default function CheckoutstatusPage({ user }) {
   const [click, setClick] = useState(false);
 
   useEffect(() => {
-    fetch(`/caregivers/booked_by_parent/${user.parent.id}`)
+    fetch(`/caregivers/booked_by_parent/${user.id}`)
       .then((r) => r.json())
       .then((data) => {
         setCaregiver(data);

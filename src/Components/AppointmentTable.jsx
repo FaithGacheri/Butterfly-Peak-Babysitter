@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
-
+import Appointment from "./Appointment";
 export default function AppointmentTable({ user }) {
+  console.log(user);
   const [bookings, setBookings] = useState([]);
+  
   useEffect(() => {
-    fetch(`/caregivers/${user.caregiver.id}/bookings`)
+    fetch(`/caregivers/${user.id}/bookings`)
     .then((r) => r.json())
-    .then(data=>{
+    .then((data) => {
       console.log(data);
-      setBookings(data)
-    })
+      setBookings(data);
+    });
   }, []);
-  console.log(bookings)
+  console.log(bookings);
+
   return (
     <div className="mt-10 w-4/5 m-auto sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
@@ -54,55 +57,14 @@ export default function AppointmentTable({ user }) {
                       scope="col"
                       className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                     >
-                      Accept
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Decline
+                      Accept/Decline
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
                   {bookings.map((person) => (
-                    <tr key={person.id}>
-                      <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-                        <div className="flex items-center">
-                            <div className="h-10 w-10 flex-shrink-0">
-                              <img className="h-10 w-10 rounded-full" src={person.parent.image} alt="Parent_image" />
-                            </div>
-                            <div className="ml-4">
-                              <div className="font-medium text-gray-900">{person.parent.first_name} {person.parent.last_name}</div>
-                              <div className="text-gray-500">{person.parent.phone}</div>
-                            </div>
-                          </div>
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                       <div className="text-gray-900">{person.start_time}</div>
-                
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      <div className="text-gray-900">{person.end_time}</div>
-
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        <button className="inline-flex rounded-full bg-green-100 py-2 px-4 text-xs font-semibold leading-5 text-green-800">
-                          Accept
-                        </button>
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        <button className="inline-flex rounded-full bg-green-100 py-2 px-4 text-xs font-semibold leading-5 text-green-800">
-                          Decline
-                        </button>
-                      </td>
-                      {/* <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                          <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                            Edit<span className="sr-only">, {person.name}</span>
-                          </a>
-                        </td> */}
-                    </tr>
-                  ))}
+                    <Appointment person={person}/>
+                  ))} 
                 </tbody>
               </table>
             </div>
