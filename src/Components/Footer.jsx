@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         <div>
-        <a href='/'>Contact Us</a>
+        <a href='/contact_us'>Contact Us</a>
           <h4>
             <p>Investors</p>
             <p>Blog</p>
