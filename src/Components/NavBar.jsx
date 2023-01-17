@@ -6,9 +6,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+export default function NavBar({user,caregiver}) {
+  // const [loggedIn, setLoggedIn]=useState(true)
+  const token=localStorage.getItem("token")
 
-export default function NavBar() {
-  const [loggedIn, setLoggedIn]=useState(true)
 
   function logOut(){
     fetch("/logout",{
@@ -17,6 +18,7 @@ export default function NavBar() {
         "Content-Type":"application/json"
       }
     })
+
     .then(r=>{
       if(r.ok){
         setUser(null)
@@ -77,7 +79,7 @@ export default function NavBar() {
                   </Link>
                 </div>
               </div>
-             {user?(null):( <div className="hidden md:flex md:items-center md:space-x-6">
+             {user||caregiver?(null):( <div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
                   to="/login"
                   className="text-base font-medium text-white hover:text-gray-300"
@@ -91,7 +93,7 @@ export default function NavBar() {
                   Sign Up
                 </Link>
               </div>)}
-              {user? (<div className="hidden sm:ml-6 sm:block">
+              {user||caregiver? (<div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
@@ -137,7 +139,7 @@ export default function NavBar() {
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
-                              Settings5
+                              Settings
                             </Link>
                           )}
                         </Menu.Item>

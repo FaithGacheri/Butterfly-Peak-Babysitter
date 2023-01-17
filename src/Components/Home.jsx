@@ -5,7 +5,6 @@ import Service from './Service';
 import Testimonials from './Testimonials';
 import Footer from './Footer';
 import Contact from './Contact'
-
 function Home() {
   return (
     <div>
@@ -104,7 +103,6 @@ function Home() {
      
         <Service/>
         <Testimonials/>
-       
         <Contact/>
         <Footer/>
     </div>

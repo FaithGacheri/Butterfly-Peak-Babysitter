@@ -7,9 +7,7 @@ export default function Testimonials() {
             Testimonials
           </h1>
           <p className="text-center mt-6 lg:text-xl font-medium text-white sm:text-center md:text-xl sm:text-sm sm:p-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
-            nulla vitae laoreet augue.<br></br> Amet feugiat est integer dolor
-            auctor adipiscing nunc urna, sit
+          Here are some of the testimonies from our happy clients.
           </p>
         </div>
         <div className="relative mx-auto lg:w-11/12 lg:grid lg:grid-cols-3 grid-rows-2 gap-x-3.5 row-gap-4.5 md:px-6 lg:px-0 md:gap-y-3.5 ">
@@ -32,9 +30,7 @@ export default function Testimonials() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="relative px-2 py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis.
+                We were so impressed with the selection of nannies on the app. We were able to find the perfect nanny for our family in no time. The messaging system and calendar feature made it easy for us to schedule interviews and appointments. We highly recommend this app to any parent looking for a trustworthy and reliable nanny.
                 </p>
               </div>
               <footer className="mt-8">
@@ -77,10 +73,7 @@ export default function Testimonials() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="relative px-2 py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis. Nemo expedita
-                  voluptas culpa sapiente alias molestiae.
+                Our experience with the app was nothing short of amazing. We were able to find a nanny with the qualifications and experience we were looking for, and the process was so much easier than trying to find a nanny through other means. We feel very lucky to have found our nanny through this app and highly recommend it to other parents.
                 </p>
               </div>
               <footer className="mt-8">
@@ -123,11 +116,7 @@ export default function Testimonials() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="relative px-2 py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis. Nemo expedita
-                  voluptas culpa sapiente alias molestiae.
-                </p>
+                We were a bit skeptical about using a nanny app at first, but it ended up being a lifesaver for us. The thorough background checks and qualifications of the nannies on the platform gave us peace of mind, and we were able to find a fantastic nanny for our children.</p>
               </div>
               <footer className="mt-8">
                 <div className="flex items-start">
@@ -169,10 +158,7 @@ export default function Testimonials() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="relative px-2 py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis. Nemo expedita
-                  voluptas culpa sapiente alias molestiae.
+                We couldn't be happier with the app. We have been using the service for a few months now and have had nothing but positive experiences. The nannies on the app are professional and reliable, and the search feature makes it easy to find the perfect nanny for our family. We highly recommend this app to other parents.
                 </p>
               </div>
               <footer className="mt-8">
@@ -215,10 +201,7 @@ export default function Testimonials() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="relative px-2 py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis. Nemo expedita
-                  voluptas culpa sapiente alias molestiae.
+                I have been using this app for the past 6 months and I can't recommend it enough. The nannies on the app are qualified, experienced and have been vetted by the app's team. The app's messaging system and calendar feature are also very convenient and easy to use. I have been able to find a great nanny for my child thanks to this app and I would recommend it to any parent.
                 </p>
               </div>
               <footer className="mt-8">
@@ -261,10 +244,7 @@ export default function Testimonials() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="relative px-2 py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis. Nemo expedita
-                  voluptas culpa sapiente alias molestiae.
+                We were very impressed with the selection of nannies on the app, and the ease of communication made the process smooth and stress-free. We highly recommend the nanny app to other parents.
                 </p>
               </div>
               <footer className="mt-8">
