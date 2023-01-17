@@ -1,10 +1,25 @@
 import React, { useState } from "react";
 import { Switch } from "@headlessui/react";
-
+import moment from 'moment';
 function Appointment({ person }) {
+  const [id, setId]=useState(0)
   const [enabled, setEnabled] = useState(false);
+  const start=moment(person.start_time).format('dddd, Do YYYY, h:mm a');
+  const end=moment(person.end_time).format('dddd, Do YYYY, h:mm a')
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
+  }
+  function handleToggle(event) {
+    event.preventDefault();
+    fetch(`/bookings/${id}/toggle`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ status: enabled })
+    })
+    .then((r)=>r.json())
+    .then(data=>console.log(data))
   }
   return (
     <tr>
@@ -26,15 +41,17 @@ function Appointment({ person }) {
         </div>
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-        <div className="text-gray-900">{person.start_time}</div>
+        <div className="text-gray-900">{start}</div>
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-        <div className="text-gray-900">{person.end_time}</div>
+        <div className="text-gray-900">{end}</div>
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+        <form onSubmit={handleToggle}>
         <Switch
           checked={enabled}
           onChange={setEnabled}
+          onClick={()=>setId(person.id)}
           className={classNames(
             enabled ? "bg-indigo-600" : "bg-gray-200",
             "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -89,9 +106,50 @@ function Appointment({ person }) {
             </span>
           </span>
         </Switch>
+        </form>
       </td>
     </tr>
   );
 }
 
 export default Appointment;
+
+// import React, { useState } from "react";
+// function Toggle({ bookingId, initialStatus }) {
+//   const [status, setStatus] = useState(initialStatus);
+//   const handleToggle = event => {
+//     event.preventDefault();
+//     const newStatus = event.target.checked;
+//     setStatus(newStatus);
+//     // Send PATCH request to update the status in the backend
+//     fetch(`/bookings/${bookingId}/toggle`, {
+//       method: "PATCH",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ status: newStatus })
+//     })
+//       .then(response => {
+//         if (!response.ok) {
+//           throw new Error(response.statusText);
+//         }
+//         return response.json();
+//       })
+//       .then(data => {
+//         // Handle successful toggle
+//       })
+//       .catch(error => {
+//         console.error("Error:", error);
+//       });
+//   };
+//   return (
+//     <label>
+//       <input
+//         type="checkbox"
+//         checked={status}
+//         onChange={handleToggle}
+//         data-booking-id={bookingId}
+//       />
+//       {status ? "Accepted" : "Pending"}
+//     </label>
+//   );
+// }
+// export default Toggle;
