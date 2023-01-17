@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
@@ -60,7 +59,7 @@ function App() {
 
   return (
     <div>
-      <NavBar user={user} caregiver={caregiver}/>
+      <NavBar user={user} caregiver={caregiver} setUser={setUser}/>
       <Routes>
         <Route path="/" element={<Home  user={user} caregiver={caregiver} />} />
         <Route path="/about" element={<About />} />
