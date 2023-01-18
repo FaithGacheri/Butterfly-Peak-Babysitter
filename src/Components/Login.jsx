@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -19,6 +20,36 @@ export default function Login({ setUser }) {
       className: "toast-message",
     });
   };
+
+    const signInCallback = (result) => {
+      if (result.credential) {
+        const params = { token: result.credential };
+        axios
+          .post("http://localhost:3000/parent/google", params)
+         .then((res) => {
+            const { authToken, ...userInfo } = res.data.data;
+            // set token in local storage/cookies based on your authentication method
+           // redirect to the authenticated page
+          })
+          .catch((err) => console.log(err));
+      }
+    };
+
+  useEffect(() => {
+    /* global google */
+     google.accounts.id.initialize({
+       client_id:
+         "200026631861-i1n7ef5gq62dhvecvnenvurqek9o6gad.apps.googleusercontent.com",
+        callback: signInCallback,
+       cancel_on_tap_outside: false,
+     });
+    google.accounts.id.prompt();
+
+    google.accounts.id.renderButton(document.getElementById("signInDiv"), {
+      theme: "outline",
+      size: "large",
+    });
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -66,12 +97,14 @@ export default function Login({ setUser }) {
   }
   return (
     <>
+    
       <ToastContainer />
       <div className="h-auto flex w-4/5 m-auto flex-col justify-around py-12  overflow-hidden">
         <div className="lg:w-full sm:mx-auto sm:w-full sm:max-w-md">
           <h2 className="mt-6 text-center text-4xl font-bold  text-indigo-600">
             Login to your account
           </h2>
+        
           <p className="mt-2 text-center text-sm text-gray-600">
             Or
             <Link
@@ -91,6 +124,8 @@ export default function Login({ setUser }) {
               action="#"
               method="POST"
             >
+                <div id="signInDiv" />
+             
               <div>
                 <label
                   htmlFor="username"
@@ -170,6 +205,7 @@ export default function Login({ setUser }) {
                 >
                   Sign in
                 </button>
+                
               </div>
             </form>
           </div>
