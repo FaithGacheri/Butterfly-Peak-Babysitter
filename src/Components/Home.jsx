@@ -3,7 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import Service from './Service';
 import Testimonials from './Testimonials';
-import Footer from './Footer';
+
 import Contact from './Contact'
 function Home() {
   return (
@@ -104,7 +104,7 @@ function Home() {
         <Service/>
         <Testimonials/>
         <Contact/>
-        <Footer/>
+        
     </div>
   )
 }
