@@ -5,7 +5,7 @@ import "react-phone-number-input/style.css";
 export default function CaregiverForm() {
   const [value, setValue] = React.useState("");
   const [username, setUsername] = React.useState("");
-  const [about, setAbout] = React.useState("");
+  const [bio, setAbout] = React.useState("");
   const [first_name, setFirstName] = React.useState("");
   const [last_name, setLastName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -16,7 +16,6 @@ export default function CaregiverForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    event.reset()
     fetch("/signup_caregiver", {
       method: "POST",
       headers: {
@@ -25,7 +24,7 @@ export default function CaregiverForm() {
       body: JSON.stringify({
         first_name,
         last_name,
-        about,
+        bio,
         username,
         email,
         education,
@@ -34,7 +33,8 @@ export default function CaregiverForm() {
         password,
         password_confirmation: passwordConfirmation,
       }),
-    });
+    })
+   
   }
   return (
     <div className=" w-2/3 m-auto mt-10 h-auto pb-20 ">
