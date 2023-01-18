@@ -1,6 +1,6 @@
 .footer {
   padding: 4rem 6rem;
-  background-color:rgb(25, 34, 44);
+  background-color:#0f1b00;
   color: whitesmoke;
   
 }
@@ -27,7 +27,7 @@
 }
 
 .footer_socials{
-  color: #0891b2;
+  color: #e1c9fe;
   margin: 20px;
   font-size: 30px;
   cursor: pointer;
@@ -61,7 +61,7 @@
 
 .bottom a{
   text-decoration: none;
-  color:#0891b2;
+  color:#ceaafa;
   padding-bottom: 0.4rem;
   font-size: 1.1rem;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
