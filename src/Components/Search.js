@@ -7,7 +7,8 @@ const Search = ({ change }) => {
         type="search"
         className="search-bar"
         placeholder="Type to search"
-        onChange={change}
+        onChange={(e)=>change(e.target.value)
+            }
       />
     </div>
   );
