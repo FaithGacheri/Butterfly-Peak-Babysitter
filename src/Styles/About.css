@@ -66,6 +66,8 @@
  .g-about {
     padding: 40px;
     text-align: center;
+    width: 70%;
+    margin: auto;
   }
   
   #g-img {
