@@ -19,7 +19,7 @@ function Home() {
                       className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                     >
                       <span className="rounded-full bg-emerald-800 px-5 py-0.5 text-sm font-semibold leading-10 text-white">
-                        Looking for nanny?
+                        Looking for a nanny?
                       </span>
                       <span className="ml-4 text-sm">
                         Check our Available nannies
@@ -39,7 +39,7 @@ function Home() {
                     </h1>
                     <p className="text-base text-gray-900 sm:text-xl lg:text-lg xl:text-xl">
                       An exemplary baby-sitting service company, we recruit the
-                      best nannies, and at your request, they are avail to your home address as you as possible
+                      best nannies, and as per your request, they are available to your home address..
                     </p>
                     <div className="sm:mt-12 ml-0">
                       <form
@@ -69,7 +69,7 @@ function Home() {
                           </div>
                         </div>
                         <p className="mt-3 text-xl text-gray-900 sm:mt-4">
-                          Register and get 2Day care for free, no credit card
+                          Register and get access to our amazing services, no credit card
                           necessary. By providing your email, you agree to our{" "}
                           <Link to="/services" className="font-medium text-gray-900">
                             terms of service

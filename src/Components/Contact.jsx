@@ -14,13 +14,13 @@ function Contact() {
 
         <form id="contact-form" method="POST">
           <label id="label" htmlFor="name">Full Name</label>
-          <input id='input1' name="name" placeholder="Enter full name..." type="text" />
+          <input id='input1' name="name" required placeholder="" type="text" />
           <label id="label" htmlFor="email">Email</label>
-          <input id='input1' name="email" placeholder="Enter email..." type="email" />
+          <input id='input1' name="email" required placeholder="" type="email" />
           <label id="label" htmlFor="message">Message</label>
           <textarea id='textarea'
             rows="6"
-            placeholder="Enter message..."
+            placeholder=""
             name="message"
             required
           ></textarea>
