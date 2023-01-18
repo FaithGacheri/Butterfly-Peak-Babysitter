@@ -42,7 +42,7 @@ function App() {
     fetch(`/caregivers`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);
@@ -51,7 +51,7 @@ function App() {
     fetch("/caregiver").then((r) => {
       if (r.ok) {
         r.json().then((caregiver) => {
-          console.log(caregiver)
+          // console.log(caregiver)
           setCaregiver(caregiver)});
       }
     });
