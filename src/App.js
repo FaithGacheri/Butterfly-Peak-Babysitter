@@ -10,6 +10,7 @@ import Signup from "./Components/Signup";
 import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
 import ForgotPasswordForm from "./Components/ForgotPasswordForm";
+import ResetPasswordForm from "./Components/ResetPasswordForm";
 import Blog1 from "./Components/Blog1";
 import Blog2 from "./Components/Blog2";
 import Blog3 from "./Components/Blog3";
@@ -52,6 +53,7 @@ function App() {
         <Route path="/contact_us" element={<Contact />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
+        <Route path="/login/reset_password" element={<ResetPasswordForm />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route exact path="/">
           <Route

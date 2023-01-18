@@ -7,7 +7,7 @@ function classNames(...classes) {
 }
 
 
-export default function NavBar() {
+export default function NavBar({user}) {
   const [loggedIn, setLoggedIn]=useState(true)
   const token=localStorage.getItem("token")
 

@@ -1,7 +1,31 @@
 
+import { emphasize } from "@mui/material";
 import { Link } from "react-router-dom";
+import React, {useState} from'react'
 
 export default function ForgotPasswordForm() {
+ 
+  const [email, setEmail] = useState('')
+  
+
+  function handlePost(e) {  
+  e.preventDefault()
+    fetch("/password/forgot_password",{
+       method: "POST",
+       headers: {
+           "Content-Type": "application/json",
+       },  
+
+       body: JSON.stringify(email),
+    }).then(res => res.json())
+    .then(response => {
+      alert(response.alert)
+    })
+    .catch(console.log)
+  }
+  
+  
+  
   return (
     <div className="h-screen bg-gray-900 overflow-hidden">
       <div className="container mx-auto flex justify-center px-19 mt-24">
@@ -26,12 +50,14 @@ export default function ForgotPasswordForm() {
                 id="email"
                 type="email"
                 placeholder="Enter Email Address..."
+                value={email} onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mb-6 flex justify-center">
               <button
                 className="flex w-1/2 justify-center rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mt-12"
                 type="submit"
+                onClick={handlePost}
               >
                 Reset Password
               </button>
