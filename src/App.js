@@ -50,7 +50,6 @@ function App() {
     fetch("/caregiver").then((r) => {
       if (r.ok) {
         r.json().then((caregiver) => {
-          console.log(caregiver)
           setCaregiver(caregiver)});
       }
     });
@@ -59,7 +58,7 @@ function App() {
 
   return (
     <div>
-      <NavBar user={user} caregiver={caregiver} setUser={setUser}/>
+      <NavBar user={user} caregiver={caregiver} setUser={setUser} setCaregiver={setCaregiver}/>
       <Routes>
         <Route path="/" element={<Home  user={user} caregiver={caregiver} />} />
         <Route path="/about" element={<About />} />
@@ -67,7 +66,7 @@ function App() {
         <Route path="/checkout_status" element={<CheckoutstatusPage user={user} />} />
         <Route path="/caregiver" element={<AppointmentTable user={caregiver}/>} />
         <Route path="caregiver">
-          <Route path="bookings" element={<CaregiverPage/>}/>
+          <Route path="bookings" element={<CaregiverPage user={caregiver}/>}/>
         </Route>
         <Route path="blog">
           <Route path="blog1" element={<Blog1 />} />
