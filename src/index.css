@@ -59,6 +59,42 @@ code {
 	animation-delay: 2.5s;
 	left: -100%;
 }
+.box1 {
+	display: flex;
+}
+
+.box1 .inner2 {
+	width: 400px;
+	height: 200px;
+  align-items: center;
+	line-height: 200px;
+	font-size: 4em;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box1 .inner2:first-child {
+	color: green;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box1 .inner2:last-child {
+	color: greenyellow;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box1 .inner2 span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box1 .inner2:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
 
 @keyframes marquee {
 	from {
