@@ -2,7 +2,8 @@
     /* width: 80%; */
     margin: 3rem auto;
     margin-block: 8rem;
-     /* background-color: red; */
+    background-color: #e2e8f0;
+    
   }
   
   .service_box{
@@ -10,7 +11,7 @@
     display: grid;
     gap: 3rem;
     text-align: center;
-    /* background-color: red; */
+   
   }
   .service_box_item{
     margin-top: 3rem;
@@ -21,5 +22,10 @@
     height: 100px;
     border-radius: 8%;
     align-items: center;
+    margin-left: 100px;
+  }
+  #g-serv{
+   
+    margin-left: 600px;
   }
   
