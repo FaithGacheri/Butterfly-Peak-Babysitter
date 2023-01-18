@@ -1,6 +1,6 @@
 
 import { emphasize } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from 'react'
 
 export default function ResetPasswordForm() {
@@ -33,23 +33,25 @@ export default function ResetPasswordForm() {
         password,
         password_confirmation
       }
-      ),
+      )
+      .then(res => res.json())
+         .then(response => {
+           alert(response.alert)
+           navigate("/")
+         }).then()
+         .catch(console.log),
     })
-    if (request.ok) {
-      // setUser(data)
-      alert(response.alert)
-      navigate("/")
-} else {
-  request.json().then(err => console.log(err))
-  navigate("/")
-}
+  
 
     
-    // .then(res => res.json())
-    //   .then(response => {
-    //     alert(response.alert)
-    //   }).then()
-    //   .catch(console.log)
+    //if (request.ok) {
+      //       setUser(data)
+      //       alert(response.alert)
+      //       navigate("/")
+      // } else {
+      //   request.json().then(err => console.log(err))
+      //   navigate("/")
+      // }
   }
 }
 
