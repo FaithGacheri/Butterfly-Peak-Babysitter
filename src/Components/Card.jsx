@@ -33,7 +33,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Card({ r, nanny, images, status, user, data,location }) {
+export default function Card({ r, nanny, images, status, user, data,location,setBook }) {
   console.log(data)
   console.log(nanny)
   const [clicked, setClicked] = useState(false);
@@ -73,6 +73,7 @@ export default function Card({ r, nanny, images, status, user, data,location }) 
         }, 3000);
       }
     });
+    setBook()
   }
 console.log(user)
   const ratings = parseFloat(

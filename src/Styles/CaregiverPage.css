@@ -26,10 +26,11 @@
 }
 .c-page{
     /* background-color: red; */
+    width: 80%;
     display: flex;
     /* align-items: center; */
     /* background-color: red; */
-    margin-left: 400px;
+    margin:auto;
 }
 .g22-image-section{
     margin-top: 10px;
