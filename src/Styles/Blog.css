@@ -4,9 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    /* background-color: lightsalmon; */
-}
+
 .g-section{
     width: 75%;
     margin: 75px auto;
