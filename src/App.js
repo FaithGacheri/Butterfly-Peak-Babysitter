@@ -21,6 +21,7 @@ import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
 import AppointmentTable from './Components/AppointmentTable';
+import ResetPasswordForm from "./Components/ResetPasswordForm";
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
@@ -62,6 +63,7 @@ function App() {
       <NavBar user={user} caregiver={caregiver} setUser={setUser} setCaregiver={setCaregiver}/>
       <Routes>
         <Route path="/" element={<Home  user={user} caregiver={caregiver} />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/checkout_status" element={<CheckoutstatusPage user={user} accept={accept} />} />
@@ -78,6 +80,7 @@ function App() {
         <Route path="/contact_us" element={<Contact />} />
         <Route path="/login" element={<Login setUser={setUser} setCaregiver={setCaregiver} />} />
         <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
+        <Route path="/login/reset_password" element={<ResetPasswordForm/>} />
         <Route path="/sign_up" element={<Signup />} />
         <Route exact path="/">
           <Route
