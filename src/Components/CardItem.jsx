@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import { useParams } from "react-router-dom";
 
-export default function CardItem({ user, data }) {
+export default function CardItem({ user, data,setBook }) {
   const [nanny, setCaregiver] = useState({});
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
@@ -30,6 +30,7 @@ export default function CardItem({ user, data }) {
   return (
     <>
       <Card
+        setBook={setBook}
         nanny={nanny}
         r={r}
         images={images}

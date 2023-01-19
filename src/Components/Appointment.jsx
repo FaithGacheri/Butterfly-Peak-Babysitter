@@ -1,10 +1,37 @@
 import React, { useState } from "react";
 import { Switch } from "@headlessui/react";
-
-function Appointment({ person }) {
+import moment from "moment";
+// import { useNavigate } from "react-router-dom";
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+function Appointment({person, id, show,setAccept}) {
   const [enabled, setEnabled] = useState(false);
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
+  const start = moment(person.start_time).format("dddd, Do YYYY, h:mm a");
+  const end = moment(person.end_time).format("dddd, Do YYYY, h:mm a");
+  // const navigate = useNavigate();
+  console.log(enabled)
+  function handleToggle(e) {
+    fetch(`/bookings/${id}/toggle`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ status: true }),
+    })
+    .then((r) => {
+      if (r.ok) {
+        r.json().then((message) => {
+          console.log(message);
+          setEnabled(e);
+          setTimeout(() => {
+              show();
+              ;
+            }, 2000);
+          });
+        }
+      })
+      setAccept()
   }
   return (
     <tr>
@@ -26,15 +53,15 @@ function Appointment({ person }) {
         </div>
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-        <div className="text-gray-900">{person.start_time}</div>
+        <div className="text-gray-900">{start}</div>
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-        <div className="text-gray-900">{person.end_time}</div>
+        <div className="text-gray-900">{end}</div>
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
         <Switch
           checked={enabled}
-          onChange={setEnabled}
+          onChange={handleToggle}
           className={classNames(
             enabled ? "bg-indigo-600" : "bg-gray-200",
             "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -95,3 +122,4 @@ function Appointment({ person }) {
 }
 
 export default Appointment;
+
