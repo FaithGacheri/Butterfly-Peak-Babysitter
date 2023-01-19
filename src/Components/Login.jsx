@@ -31,7 +31,7 @@ export default function Login({ setUser,setCaregiver }) {
        .then((r) => {
         // if (r.ok) {
           console.log(r.data)
-      setUser(r.parent);
+      setUser(r.data);
             setTimeout(() => {
               navigate("/cards");
             }, 1000);
