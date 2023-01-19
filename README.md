@@ -1,3 +1,62 @@
+# Project Name : Butterfly-peak-Babysitter
+
+## Client side react application for a Baby-sitter app.
+
+# Project Description:
+● This app incorporates an admin user who can perform all the crud operations and on top
+of that can add a caregiver to the site once validated and re-assign a caregiver upon client
+request.
+
+● Our clients, who in this case is a parent, can hire a caregiver from their nearest location.
+
+● As such, once a parent fills up the hiring form they are able to see the caregivers available
+near their location.
+
+● We also incorporate a payment where clients can pay for services rendere
+
+# Problem statement
+Lately parents have had the need of babysitters who will take care of their kids when they are out
+and about going to work,managing their businesses or running their errands.The time to drop off
+or pick up their kids from daycare at times prove to be a challenge for most parents.
+
+# Solution.
+Build a web application that provides babysitting services to parents at their homes.Parents can
+access a babysitter of their choice for a specified amount of time that they want at an affordable
+fee.
+
+#
+
+# Project Authors;
+                  1.Faith Gacheru ~ Scrum master.
+                  2.Calvin Kodalo.
+                  3.Sigei Isack.
+                  4.Griffin Kimuit.
+                  5.Esther Nga'nga.
+                  6.Amran Abdikadir
+                  7.Geogrey Muiruri .
+                  8.Diana Kwamboka.
+
+# Technologies Used;
+- React for the front end.
+- React router.
+- Tailwind CSS for styling or webpages.
+- Rack-server for sitra applications.
+- Sinatra Active Records.
+-JWT
+
+# MVP
+- Landing page ,navigation bar
+- Home page.
+- About page.
+- Login page.
+# Github Link
+- https://github.com/FaithGacheri/Butterfly-Peak-Babysitter.git
+
+
+# Copyright & License
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
