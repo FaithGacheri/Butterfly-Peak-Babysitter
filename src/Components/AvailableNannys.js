@@ -93,15 +93,7 @@ export default function AvailableNannys({ data }) {
                 Favourite
               </button>
             </div>
-            {/* {isShown ? (
-              <div className="flex justify-center pt-10">
-                <Link to={`/cards/${data.id}`}>
-                  <button className="w-full p-3 rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                    View More
-                  </button>
-                </Link>
-              </div>
-            ) : null} */}
+
           </div>
         </div>
       </div>
