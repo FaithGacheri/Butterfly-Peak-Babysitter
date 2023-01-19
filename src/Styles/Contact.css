@@ -3,11 +3,11 @@
     margin:cover;
     height: 90vh;
     display: flex;
-   background-color:#535058;
+   background-color:#524f57;
 }
   
   .contact .leftSide {
-    opacity: 0.7;
+    opacity: 0.5;
     height: 1000px;
     flex: 50%;
     /* background-position: center; */
@@ -61,7 +61,7 @@
   #input1::placeholder,
   #textarea::placeholder {
     font-weight: bold;
-    color: #52465a;
+    color: #4a454f;
     font-family:'Times New Roman', Times, serif;
   }
   /* form input:focus,
