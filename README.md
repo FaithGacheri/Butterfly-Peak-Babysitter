@@ -6,9 +6,12 @@
 ● This app incorporates an admin user who can perform all the crud operations and on top
 of that can add a caregiver to the site once validated and re-assign a caregiver upon client
 request.
+
 ● Our clients, who in this case is a parent, can hire a caregiver from their nearest location.
+
 ● As such, once a parent fills up the hiring form they are able to see the caregivers available
 near their location.
+
 ● We also incorporate a payment where clients can pay for services rendere
 
 # Problem statement
