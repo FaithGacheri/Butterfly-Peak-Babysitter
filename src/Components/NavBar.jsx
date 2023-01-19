@@ -1,24 +1,45 @@
 import { Fragment, useState } from "react";
-import { Popover, Transition, Menu} from "@headlessui/react";
-import { Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Popover, Transition, Menu } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, useNavigate } from "react-router-dom";
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+export default function NavBar({ user, caregiver, setUser, setCaregiver}) {
+  // const [loggedIn, setLoggedIn]=useState(true)
+const nav=useNavigate()
 
-export default function NavBar({user}) {
-  const [loggedIn, setLoggedIn]=useState(true)
-  const token=localStorage.getItem("token")
+  function logOut() {
+    if (user) {
+      fetch("/logout", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then(r => {
+        if (r.ok) {
+          nav('/')
+          setUser(null)
+        }
+      })
+    } else {
+      fetch("/caregiver/logout", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        .then(r => {
+          if (r.ok) {
+            nav('/')
+            setCaregiver(null)
+          }
+        })
+    }
 
-  function logOut(){
-    fetch("/logout",{
-      method:"DELETE",
-      headers:{
-        "Content-Type":"application/json"
-      }
-    })
-    localStorage.removeItem("token")
+
+
   }
 
 
@@ -28,7 +49,7 @@ export default function NavBar({user}) {
     <div>
       <div className="relative ">
         <Popover as="header" className="relative">
-          <div className="bg-gray-900 pt-6 items-center pb-4">
+          <div className="bg-slate-400 pt-6 items-center pb-4">
             <nav
               className="relative mx-auto flex w-4/5 items-center justify-between px-4 sm:px-6"
               aria-label="Global"
@@ -37,7 +58,7 @@ export default function NavBar({user}) {
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link to="/about">
                     <h1 className="font-medium text-white hover:text-gray-300 lg:text-4xl md:text-2xl">
-                      Bb<span className="text-red-600">Care</span>
+                      Bb<span className="text-emerald-800">Care</span>
                     </h1>
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
@@ -50,45 +71,45 @@ export default function NavBar({user}) {
                 <div className="hidden space-x-8 md:ml-10 md:flex">
                   <Link
                     to="/"
-                    className="text-base font-2xl text-white focus:text-red-600 focus:text-xl hover:text-gray-300"
+                    className="text-base font-2xl text-gray-900 focus:text-red-600 focus:text-xl hover:text-gray-300"
                   >
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-gray-900 hover:text-gray-300"
                   >
                     About Us
                   </Link>
                   <Link
                     to="/contact_us"
-                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-gray-900 hover:text-gray-300"
                   >
                     Contact Us
                   </Link>
                   <Link
                     to="/blog"
-                    className="text-base focus:text-red-600 focus:text-xl font-medium text-white hover:text-gray-300"
+                    className="text-base focus:text-red-600 focus:text-xl font-medium text-gray-900 hover:text-gray-300"
                   >
                     Blog
                   </Link>
                 </div>
               </div>
-             {user?(null):( <div className="hidden md:flex md:items-center md:space-x-6">
+              {user || caregiver ? (null) : (<div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
                   to="/login"
-                  className="text-base font-medium text-white hover:text-gray-300"
+                  className="text-base font-medium text-gray-900 hover:text-gray-300"
                 >
                   Log in
                 </Link>
                 <Link
                   to="/sign_up"
-                  className="bg-gradient-to-r from-teal-500 to-cyan-600 inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
+                  className="bg-emerald-800 inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700"
                 >
                   Sign Up
                 </Link>
               </div>)}
-              {user? (<div className="hidden sm:ml-6 sm:block">
+              {user || caregiver ? (<div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
@@ -134,7 +155,7 @@ export default function NavBar({user}) {
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
-                              Settings5
+                              Settings
                             </Link>
                           )}
                         </Menu.Item>
@@ -146,8 +167,8 @@ export default function NavBar({user}) {
                                 active ? 'bg-gradient-to-r from-teal-500 to-cyan-600' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
-                              
-                        onClick={logOut}
+
+                              onClick={logOut}
                             >
                               sign out
                             </Link>
@@ -157,7 +178,7 @@ export default function NavBar({user}) {
                     </Transition>
                   </Menu>
                 </div>
-              </div>):(null)}
+              </div>) : (null)}
             </nav>
           </div>
 
@@ -177,7 +198,7 @@ export default function NavBar({user}) {
               <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                  <h1 className="font-medium text-black hover:text-gray-300 lg:text-4xl md:text-2xl">
+                    <h1 className="font-medium text-black hover:text-gray-300 lg:text-4xl md:text-2xl">
                       Bb<span className="text-red-600">Care</span>
                     </h1>
                   </div>
@@ -234,7 +255,7 @@ export default function NavBar({user}) {
                       </Link>
                     </p>
                   </div>
-                  
+
                 </div>
               </div>
             </Popover.Panel>

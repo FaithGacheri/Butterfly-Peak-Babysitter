@@ -12,35 +12,68 @@ export default function ResetPasswordForm() {
   const navigate = useNavigate()
 
 
-
   function handlePost(e) {
-    e.preventDefault()
+    e.preventDefault();
     if (password !== password_confirmation) {
       alert("Passwords don't match");
-      setPassword('')
-      setPasswordConfirmation('')
+      setPassword("");
+      setPasswordConfirmation("");
+    } else {
+      fetch("/password/reset_password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          password_reset_token,
+          email,
+          password,
+          password_confirmation,
+        }),
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          alert(response.alert);
+          navigate("/");
+        });
+      //if (request.ok) {
+      //       setUser(data)
+      //       alert(response.alert)
+      //       navigate("/")
+      // } else {
+      //   request.json().then(err => console.log(err))
+      //   navigate("/")
+      // }
     }
-    else {
-    fetch("/password/reset_password", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+  }
 
-      body: JSON.stringify({
-        password_reset_token,
-        email,
-        password,
-        password_confirmation
-      }
-      )
-      .then(res => res.json())
-         .then(response => {
-           alert(response.alert)
-           navigate("/")
-         }).then()
-         .catch(console.log),
-    })
+
+  // function handlePost(e) {
+  //   e.preventDefault()
+  //   if (password !== password_confirmation) {
+  //     alert("Passwords don't match");
+  //     setPassword('')
+  //     setPasswordConfirmation('')
+  //   }
+  //   else {
+  //   fetch("/password/reset_password", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+
+  //     body: JSON.stringify({
+  //       password_reset_token: password_reset_token,
+  //       email: email,
+  //       password: password,
+  //       password_confirmation: password_confirmation
+  //     }
+  //     )).then(response => {
+  //          alert(response.alert)
+  //          navigate("/")
+  //        }).then()
+  //        .catch(console.log),
+  //       }
   
 
     
@@ -52,9 +85,7 @@ export default function ResetPasswordForm() {
       //   request.json().then(err => console.log(err))
       //   navigate("/")
       // }
-  }
-}
-
+  
 
 
   return (

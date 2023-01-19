@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
@@ -22,47 +21,76 @@ import CheckoutstatusPage from "./Components/CheckoutStatusPage";
 import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
-
+import AppointmentTable from './Components/AppointmentTable';
+import ResetPasswordForm from "./Components/ResetPasswordForm";
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
-  console.log(user)
+  const [caregiver, setCaregiver] = useState(null)
+  const [book, setBook] = useState(false)
+  const [accept, setAccept] = useState(false)
+  useEffect(() => {
+    // auto-login
+    fetch("/parent").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          console.log(user)
+          setUser(user)});
+      }
+    });
+  }, []);
+
   useEffect(() => {
     fetch(`/caregivers`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);
+  useEffect(() => {
+    // auto-login
+    fetch("/caregiver").then((r) => {
+      if (r.ok) {
+        r.json().then((caregiver) => {
+          setCaregiver(caregiver)});
+      }
+    });
+  }, []);
+
 
   return (
     <div>
-      <NavBar user={user} />
+      <NavBar user={user} caregiver={caregiver} setUser={setUser} setCaregiver={setCaregiver}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  user={user} caregiver={caregiver} />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/caregiver" element={<CaregiverPage />} />
+        <Route path="/checkout_status" element={<CheckoutstatusPage user={user} accept={accept} />} />
+        <Route path="/caregiver" element={<AppointmentTable user={caregiver} book={book} setAccept={setAccept}/>} />
+        <Route path="caregiver">
+          <Route path="bookings" element={<CaregiverPage user={caregiver}/>}/>
+        </Route>
         <Route path="blog">
           <Route path="blog1" element={<Blog1 />} />
           <Route path="blog2" element={<Blog2 />} />
           <Route path="blog3" element={<Blog3 />} />
         </Route>
-        <Route path="userprofile" element={<Profile user={user} />} />
+        <Route path="userprofile" element={<Profile user={user} caregiver={caregiver} />} />
         <Route path="/contact_us" element={<Contact />} />
-        <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/login" element={<Login setUser={setUser} setCaregiver={setCaregiver} />} />
         <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
-        <Route path="/login/reset_password" element={<ResetPasswordForm />} />
+        <Route path="/login/reset_password" element={<ResetPasswordForm/>} />
         <Route path="/sign_up" element={<Signup />} />
         <Route exact path="/">
           <Route
             exact
             path="/cards"
-            element={<Cards data={data} user={user} />}
+            element={<Cards user={user} data={data} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
-        </Route>
+                 </Route>
         <Route path="sign_up">
           <Route path="caregiver" element={<Caregiver />} />
         </Route>
@@ -72,11 +100,8 @@ function App() {
           </Route>
         </Route>
 
-        <Route exact path="cards/:id" element={<CardItem user={user} />} />
+        <Route exact path="cards/:id" element={<CardItem data={data} user={user} setBook={setBook}/>} />
 
-        <Route path="cards/:id">
-          <Route path="checkout_status" element={<CheckoutstatusPage />} />
-        </Route>
       </Routes>
     </div>
   );

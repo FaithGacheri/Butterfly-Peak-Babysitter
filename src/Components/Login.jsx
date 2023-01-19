@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
-export default function Login({ setUser }) {
+export default function Login({ setUser,setCaregiver }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState([]);
@@ -21,52 +21,57 @@ export default function Login({ setUser }) {
     });
   };
 
-    const signInCallback = (result) => {
-      if (result.credential) {
-        const params = { token: result.credential };
-        axios
-          .post("http://localhost:3000/parent_login/google", params)
-         .then((r) => {
-          // if (r.ok) {
-            
-        setUser(r.parent);
-              setTimeout(() => {
-                navigate("/cards");
-              }, 1000);
-          // } else {
-          // ((err) => setError(err.error));
+
+  // google auth functionality 
+  const signInCallback = (result) => {
+    if (result.credential) {
+      const params = { token: result.credential };
+      axios
+        .post("http://localhost:3000/parent_login/google", params)
+       .then((r) => {
+        // if (r.ok) {
+          console.log(r.data)
+      setUser(r.data);
+            setTimeout(() => {
+              navigate("/cards");
+            }, 1000);
+        // } else {
+        // ((err) => setError(err.error));
+        // }
+        // console.log(r)
+        //   const { authToken, ...userInfo } = res.data.data;
+        //   // set token in local storage/cookies based on your authentication method
+        //  // redirect to the authenticated page
+        // //  if (res.ok) {
+        //   res.json().then((user) =>setUser(user));
+        //     setTimeout(() => {
+        //       navigate("/caregiver");
+        //     }, 1000);
           // }
-          // console.log(r)
-          //   const { authToken, ...userInfo } = res.data.data;
-          //   // set token in local storage/cookies based on your authentication method
-          //  // redirect to the authenticated page
-          // //  if (res.ok) {
-          //   res.json().then((user) =>setUser(user));
-          //     setTimeout(() => {
-          //       navigate("/caregiver");
-          //     }, 1000);
-            // }
 
-          })
-          .catch((err) => console.log(err));
-      }
-    };
+        })
+        .catch((err) => console.log(err));
+    }
+  };
 
-  useEffect(() => {
-    /* global google */
-     google.accounts.id.initialize({
-       client_id:
-         "200026631861-i1n7ef5gq62dhvecvnenvurqek9o6gad.apps.googleusercontent.com",
-        callback: signInCallback,
-       cancel_on_tap_outside: false,
-     });
-    google.accounts.id.prompt();
+useEffect(() => {
+  /* global google */
+   google.accounts.id.initialize({
+     client_id:
+       "200026631861-i1n7ef5gq62dhvecvnenvurqek9o6gad.apps.googleusercontent.com",
+      callback: signInCallback,
+     cancel_on_tap_outside: false,
+   });
+  google.accounts.id.prompt();
 
-    google.accounts.id.renderButton(document.getElementById("signInDiv"), {
-      theme: "outline",
-      size: "large",
-    });
-  }, []);
+  google.accounts.id.renderButton(document.getElementById("signInDiv"), {
+    theme: "outline",
+    size: "large",
+  });
+}, []);
+
+//end of google auth functionality
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -82,10 +87,13 @@ export default function Login({ setUser }) {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((user) =>setUser(user));
-            setTimeout(() => {
-              navigate("/caregiver");
-            }, 1000);
+          r.json().then((user) =>{
+            setCaregiver(user)
+            // localStorage.setItem('token', user.jwt);
+              setTimeout(() => {
+                navigate("/caregiver");
+              }, 1000);
+          });
         } else {
           r.json().then((err) => setError(err.error));
         }
@@ -101,11 +109,13 @@ export default function Login({ setUser }) {
         }),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((user) => setUser(user));
-          toastMessage();
-          setTimeout(() => {
-            navigate("/cards");
-          }, 1000);
+          r.json().then((user) => {
+            setUser(user)
+            toastMessage();
+            setTimeout(() => {
+              navigate("/cards");
+            }, 1000);
+          });
         } else {
           r.json().then((err) => setError(err.error));
         }
@@ -141,8 +151,8 @@ export default function Login({ setUser }) {
               action="#"
               method="POST"
             >
-                <div id="signInDiv" />
-             
+
+                <div id="signInDiv" /> 
               <div>
                 <label
                   htmlFor="username"

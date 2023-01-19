@@ -1,6 +1,7 @@
 .blog-2{
     width: 70%;
     margin-left: 20%;
+    /* background-color:#e2e8f0 ; */
 }
 #g-how{
     margin-top: 20px;
@@ -21,3 +22,42 @@ margin-bottom: 10px;
    margin-top: 20px; 
    margin-bottom: 20px;
 }
+#g-videos{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+iframe {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  iframe:last-child {
+    padding-right: 20px;
+  }
+  
+  .videos {
+    transform: translateX(-50px);
+    display: flex;
+    overflow-x: scroll;
+    width: 108%;
+    background-color:grey;
+    background-image: linear-gradient(147deg, --grey-color 74%);
+  }
+  
+  .videos::-webkit-scrollbar {
+    height: 10px;
+    outline: none;
+  }
+  
+  .videos::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: white;
+  }
+  
+  @media (max-width: 500px) {
+    .videos::-webkit-scrollbar {
+      display: none;
+    }
+  }
