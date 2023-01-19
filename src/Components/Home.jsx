@@ -3,6 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import Service from './Service';
 import Testimonials from './Testimonials';
+import img1 from "../Images/image1.webp";
 
 import Contact from './Contact'
 function Home() {
@@ -90,9 +91,9 @@ function Home() {
                 <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
                   <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                     <img
-                      className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-full lg:max-w-none"
-                      src="https://images.squarespace-cdn.com/content/v1/5a2f40a41f318d38ccf0c819/1593066487695-U1K0I1UIO6IL230ECKKO/Website-Redesign_KidsCarePackV2.0-10.png?format=2500w"
-                      alt=""
+                      className="w-full lg:rounded-xl lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-full lg:max-w-none"
+                      src={img1}
+                      alt="image-cover"
                     />
                   </div>
                 </div>
