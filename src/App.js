@@ -26,6 +26,8 @@ function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
   const [caregiver, setCaregiver] = useState(null)
+  const [book, setBook] = useState(false)
+  const [accept, setAccept] = useState(false)
   useEffect(() => {
     // auto-login
     fetch("/parent").then((r) => {
@@ -63,8 +65,8 @@ function App() {
         <Route path="/" element={<Home  user={user} caregiver={caregiver} />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/checkout_status" element={<CheckoutstatusPage user={user} />} />
-        <Route path="/caregiver" element={<AppointmentTable user={caregiver}/>} />
+        <Route path="/checkout_status" element={<CheckoutstatusPage user={user} accept={accept} />} />
+        <Route path="/caregiver" element={<AppointmentTable user={caregiver} book={book} setAccept={setAccept}/>} />
         <Route path="caregiver">
           <Route path="bookings" element={<CaregiverPage user={caregiver}/>}/>
         </Route>
@@ -95,7 +97,7 @@ function App() {
           </Route>
         </Route>
 
-        <Route exact path="cards/:id" element={<CardItem data={data} user={user} />} />
+        <Route exact path="cards/:id" element={<CardItem data={data} user={user} setBook={setBook}/>} />
 
       </Routes>
     </div>
