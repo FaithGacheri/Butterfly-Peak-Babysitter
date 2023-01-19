@@ -25,11 +25,28 @@ export default function Login({ setUser }) {
       if (result.credential) {
         const params = { token: result.credential };
         axios
-          .post("http://localhost:3000/parent/google", params)
-         .then((res) => {
-            const { authToken, ...userInfo } = res.data.data;
-            // set token in local storage/cookies based on your authentication method
-           // redirect to the authenticated page
+          .post("http://localhost:3000/parent_login/google", params)
+         .then((r) => {
+          // if (r.ok) {
+            
+        setUser(r.parent);
+              setTimeout(() => {
+                navigate("/cards");
+              }, 1000);
+          // } else {
+          // ((err) => setError(err.error));
+          // }
+          // console.log(r)
+          //   const { authToken, ...userInfo } = res.data.data;
+          //   // set token in local storage/cookies based on your authentication method
+          //  // redirect to the authenticated page
+          // //  if (res.ok) {
+          //   res.json().then((user) =>setUser(user));
+          //     setTimeout(() => {
+          //       navigate("/caregiver");
+          //     }, 1000);
+            // }
+
           })
           .catch((err) => console.log(err));
       }
