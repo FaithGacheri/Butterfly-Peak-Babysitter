@@ -86,8 +86,7 @@ function App() {
             element={<Cards user={user} data={data} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
-          <Route exact path="/dropdown" element={<DropDownBar />} />
-        </Route>
+                 </Route>
         <Route path="sign_up">
           <Route path="caregiver" element={<Caregiver />} />
         </Route>
