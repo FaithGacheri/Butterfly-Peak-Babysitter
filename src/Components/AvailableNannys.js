@@ -6,27 +6,29 @@ import "../Styles/TestFile.css";
 
 export default function AvailableNannys({ data }) {
   const [isShown, setIsShown] = useState(false);
+  
+  // console.log(data, 'mydata')
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
 
-  function favouritenanny(data) {
-    fetch(`http://localhost:3000/favouriteNannys`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        name: data.name,
-        nannyLocation: data.nannyLocation,
-        rating: data.rating,
-        nannyPrice: data.nannyPrice,
-        nanny_url: data.nanny_url,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.error(err.message));
-  }
+  // function favouritenanny(data) {
+  //   fetch(`/care`, {
+  //     method: "POST",
+  //     headers: { "content-type": "application/json" },
+  //     body: JSON.stringify({
+  //       name: data.name,
+  //       nannyLocation: data.nannyLocation,
+  //       rating: data.rating,
+  //       nannyPrice: data.nannyPrice,
+  //       nanny_url: data.nanny_url,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  //     .catch((err) => console.error(err.message));
+  // }
 
 
     const reviews = data.reviews.map((rating) => rating.ratings);
@@ -43,7 +45,7 @@ export default function AvailableNannys({ data }) {
             <figure className="snip0016">
               <img
                 className=" lg:h-64 lg:w-full lg:max-w-full md:h-48 md:w-full"
-                src={data.image.image1}
+                src={data.image.image1 }
                 alt="Image_not_found"
               />
               <figcaption>
@@ -86,20 +88,12 @@ export default function AvailableNannys({ data }) {
               </button>
               <button
                 className="p-3 text-center fav-button"
-                onClick={favouritenanny(data)}
+                // onClick={favouritenanny(data)}
               >
                 Favourite
               </button>
             </div>
-            {isShown ? (
-              <div className="flex justify-center pt-10">
-                <Link to={`/cards/${data.id}`}>
-                  <button className="w-full p-3 rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                    View More
-                  </button>
-                </Link>
-              </div>
-            ) : null}
+
           </div>
         </div>
       </div>

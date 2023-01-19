@@ -41,7 +41,7 @@ function App() {
     fetch(`/caregivers`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);
@@ -50,7 +50,7 @@ function App() {
     fetch("/caregiver").then((r) => {
       if (r.ok) {
         r.json().then((caregiver) => {
-          console.log(caregiver)
+          // console.log(caregiver)
           setCaregiver(caregiver)});
       }
     });
@@ -86,7 +86,7 @@ function App() {
             element={<Cards user={user} data={data} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
-        </Route>
+                 </Route>
         <Route path="sign_up">
           <Route path="caregiver" element={<Caregiver />} />
         </Route>
