@@ -63,25 +63,31 @@ Upon successfully starting the server, Run npm start and the app will launch on 
 
 # step 1: To register an account you first sign-up using the sign up button in the upper right corner of the navbar.When prompted, enter your credentials as needed and click the sign up button.
 
+![image](https://user-images.githubusercontent.com/108331034/213512272-5168609b-befa-4731-b9af-5e6a95675d9e.png)
 
 
 # step 2: If you already have an account, clicking the log in button on the navbar will take you to a screen where you must enter both your username and password to access it. according to the picture below
 
+![image](https://user-images.githubusercontent.com/108331034/213512855-c69eda07-d90a-4dba-86eb-35c4edcd92c5.png)
 
 
 # step 3: After you have logged in ,as a parent, you'll see a page where you can book the caregiver of your choice as shown below.
 
+![image](https://user-images.githubusercontent.com/108331034/213512132-a0a407d1-9875-4214-aa8f-0b2a17ca64ce.png)
+
 
 # step 4: After you have clicked the book button you will be navigated to a page where you can select the date and time of the appointment with the caregiver. 
 
-
+![image](https://user-images.githubusercontent.com/108331034/213507673-d6712f6c-c200-49a8-b10b-bc5b2a1faab2.png)
 
 # On the other hand,a caregiver can log in by ticking the caregiver's checkbox and she will be directed to a page where  she can see pending bookings and accept or decline.
 
+![image](https://user-images.githubusercontent.com/108331034/213512467-5c6a80c9-372b-432f-8449-b14af4a2b721.png)
 
 
 # Once she accepts,the page on the parent's side will show confirmed
  
+![image](https://user-images.githubusercontent.com/108331034/213512535-12f593e3-fac9-4a27-8336-d1b6e490fbd8.png)
 
 
  # Support and contact details
