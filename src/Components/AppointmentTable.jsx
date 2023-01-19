@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment, useRef } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import Appointment from "./Appointment";
 import { Dialog, Transition } from "@headlessui/react";
 import {useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function AppointmentTable({ user,book,setAccept}) {
         const response=await fetch(`/caregivers/${user.id}/bookings`)
         const updatedData=await response.json();
         setBookings(updatedData);
-      },2000)
+      },1000)
     return()=>clearInterval(interval)
   }, [book]);
   console.log(bookings);

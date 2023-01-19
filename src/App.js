@@ -21,7 +21,6 @@ import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
 import AppointmentTable from './Components/AppointmentTable';
-// import Footer from "./Components/Footer";
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);

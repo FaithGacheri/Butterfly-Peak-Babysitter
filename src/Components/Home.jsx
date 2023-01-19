@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Service from "./Service";
 import Testimonials from "./Testimonials";
 import img1 from "../Images/image1.webp";
-
-import Contact from "./Contact";
-function Home({ user,caregiver}) {
+import Footer from './Footer'
+import Contact from './Contact'
+function Home({user, caregiver}) {
   return (
     <div>
       <main>
@@ -80,49 +80,46 @@ function Home({ user,caregiver}) {
                             <button className="block w-full rounded-md bg-emerald-800 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900">
                               Get Started
                             </button>
-                          </Link>
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                      <p className="mt-3 text-xl text-gray-900 sm:mt-4">
-                        Register and get access to our amazing services, no
-                        credit card necessary. By providing your email, you
-                        agree to our{" "}
-                        <Link
-                          to="/services"
-                          className="font-medium text-gray-900"
-                        >
-                          terms of service
-                        </Link>
-                        .
-                      </p>
-                    </form>
-                  </div>
-                  <div>
-                    <Link to="/cards">
-                      <button className="flex justify-center w-1/2 rounded-md bg-emerald-800 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 mt-12">
-                        Visit Babysitters page
-                      </button>
-                    </Link>
+                        <p className="mt-3 text-xl text-gray-900 sm:mt-4">
+                          Register and get access to our amazing services, no credit card
+                          necessary. By providing your email, you agree to our{" "}
+                          <Link to="/services" className="font-medium text-gray-900">
+                            terms of service
+                          </Link>
+                          .
+                        </p>
+                        </form>
+                     
+                    
+                    </div>
+                    <div>
+                      <Link to="/cards">
+                      <button className="flex justify-center w-1/2 rounded-md bg-emerald-800 py-3 px-4 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 mt-12">Visit Babysitters page</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                  <img
-                    className="w-full lg:rounded-xl lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-full lg:max-w-none"
-                    src={img1}
-                    alt="image-cover"
-                  />
+                <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
+                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                    <img
+                      className="w-full lg:rounded-xl lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-full lg:max-w-none"
+                      src={img1}
+                      alt="image_cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-
-      <Service />
-      <Testimonials />
-      <Contact />
+        </main>
+     
+        <Service/>
+        <Testimonials/>
+        <Contact/>
+        <Footer/>
     </div>
   );
 }

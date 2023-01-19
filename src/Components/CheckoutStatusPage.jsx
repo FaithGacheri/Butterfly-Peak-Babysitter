@@ -9,7 +9,7 @@ export default function CheckoutstatusPage({ user, accept }) {
       const response=await fetch(`/caregivers/booked_by_parent/${user.id}`)
       const updatedData=await response.json();
       setCaregiver(updatedData);
-    },2000)
+    },1000)
   return()=>clearInterval(interval)
   }, [accept]);
   
