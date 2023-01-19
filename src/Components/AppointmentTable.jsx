@@ -3,7 +3,7 @@ import Appointment from "./Appointment";
 import { Dialog, Transition } from "@headlessui/react";
 import {useNavigate } from "react-router-dom";
 
-export default function AppointmentTable({ user}) {
+export default function AppointmentTable({ user,book,setAccept}) {
   const [open, setOpen] = useState(true);
   const [decline, setDecline] = useState(true);
   const [modal, setModal] = useState(false);
@@ -13,13 +13,13 @@ export default function AppointmentTable({ user}) {
 
   console.log(modal);
   useEffect(() => {
-    fetch(`/caregivers/${user.id}/bookings`)
-      .then((r) => r.json())
-      .then((data) => {
-        console.log(data);
-        setBookings(data);
-      });
-  }, []);
+      const interval=setInterval(async() =>{
+        const response=await fetch(`/caregivers/${user.id}/bookings`)
+        const updatedData=await response.json();
+        setBookings(updatedData);
+      },2000)
+    return()=>clearInterval(interval)
+  }, [book]);
   console.log(bookings);
 
   function show() {
@@ -169,6 +169,7 @@ function handleNavigation(){
                   <tbody className="divide-y divide-gray-200 bg-white">
                     {bookings.map((person) => (
                       <Appointment
+                      setAccept={setAccept}
                         person={person}
                         id={person.id}
                         show={show}

@@ -5,7 +5,7 @@ import moment from "moment";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-function Appointment({ person, id, show,rerender }) {
+function Appointment({person, id, show,setAccept}) {
   const [enabled, setEnabled] = useState(false);
   const start = moment(person.start_time).format("dddd, Do YYYY, h:mm a");
   const end = moment(person.end_time).format("dddd, Do YYYY, h:mm a");
@@ -31,7 +31,7 @@ function Appointment({ person, id, show,rerender }) {
           });
         }
       })
-      rerender()
+      setAccept()
   }
   return (
     <tr>
