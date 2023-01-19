@@ -21,7 +21,7 @@ import Profile from "./Components/Profile";
 import CaregiverReviewsPage from "./Components/CaregiverReviewsPage";
 import CaregiverPage from "./Components/CaregiverPage";
 import AppointmentTable from './Components/AppointmentTable';
-
+import Footer from "./Components/Footer";
 function App() {
   const [data, setData] = useState([]);
   const [user, setUser] = useState(null);
@@ -43,7 +43,7 @@ function App() {
     fetch(`/caregivers`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);
@@ -87,7 +87,7 @@ function App() {
             element={<Cards user={user} data={data} />}
           />
           <Route exact path="/favourite" element={<Favourite />} />
-        </Route>
+                 </Route>
         <Route path="sign_up">
           <Route path="caregiver" element={<Caregiver />} />
         </Route>
@@ -100,6 +100,7 @@ function App() {
         <Route exact path="cards/:id" element={<CardItem data={data} user={user} setBook={setBook}/>} />
 
       </Routes>
+      <Footer/>
     </div>
   );
 }

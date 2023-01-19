@@ -8,6 +8,7 @@ const Search = ({ change }) => {
         className="search-bar"
         placeholder="Type to search"
         onChange={change}
+            
       />
     </div>
   );
