@@ -28,10 +28,10 @@ export default function ResetPasswordForm() {
       },
 
       body: JSON.stringify({
-        password_reset_token,
-        email,
-        password,
-        password_confirmation
+        password_reset_token: password_reset_token,
+        email: email,
+        password: password,
+        password_confirmation: password_confirmation
       }
       )
       .then(response => response.json())

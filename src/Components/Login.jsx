@@ -30,7 +30,7 @@ export default function Login({ setUser,setCaregiver }) {
         .post("http://localhost:3000/parent_login/google", params)
        .then((r) => {
         // if (r.ok) {
-          
+          console.log(r.data)
       setUser(r.parent);
             setTimeout(() => {
               navigate("/cards");
