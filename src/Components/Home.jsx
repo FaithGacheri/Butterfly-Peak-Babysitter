@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import Service from './Service';
 import Testimonials from './Testimonials';
 import img1 from "../Images/image1.webp";
-
 import Contact from './Contact'
+import Footer from "./Footer";
 function Home() {
   return (
     <div>
@@ -105,7 +105,7 @@ function Home() {
         <Service/>
         <Testimonials/>
         <Contact/>
-        
+        <Footer/>
     </div>
   )
 }
