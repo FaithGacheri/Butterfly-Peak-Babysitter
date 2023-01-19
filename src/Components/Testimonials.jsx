@@ -1,17 +1,17 @@
 export default function Testimonials() {
   return (
     <>
-      <section className="bg-gray-900 m-auto">
+      <section className="bg-white m-auto">
         <div className="border-t pb-10 pt-10 mb-10">
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-white text-center sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
             Testimonials
           </h1>
-          <p className="text-center mt-6 lg:text-xl font-medium text-white sm:text-center md:text-xl sm:text-sm sm:p-4">
+          <p className="text-center mt-6 lg:text-4xl font-medium text-gray-900 sm:text-center md:text-xl sm:text-sm sm:p-4">
           Here are some of the testimonies from our happy clients.
           </p>
         </div>
         <div className="relative mx-auto lg:w-11/12 lg:grid lg:grid-cols-3 grid-rows-2 gap-x-3.5 row-gap-4.5 md:px-6 lg:px-0 md:gap-y-3.5 ">
-          <div id="testimonial" className="bg-gradient-to-r from-teal-500 to-cyan-600 py-12 px-4 sm:px-6 md:flex md:flex-col md:mb-10 md:py-16 md:pl-10 md:pr-10 lg:pr-16">
+          <div id="testimonial" className="bg-emerald-800 py-12 px-4 sm:px-6 md:flex md:flex-col md:mb-10 md:py-16 md:pl-10 md:pr-10 lg:pr-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -54,7 +54,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 border-indigo-900 py-12 px-4 md:mb-10 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-emerald-800 border-t-2 border-indigo-900 py-12 px-4 md:mb-10 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -97,7 +97,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-emerald-800  border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -139,7 +139,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-emerald-800  border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -182,7 +182,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div id="testimonial"  className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial"  className="bg-emerald-800  border-t-2 md:mb-10 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
@@ -225,7 +225,7 @@ export default function Testimonials() {
               </footer>
             </blockquote>
           </div>
-          <div id="testimonial" className="bg-gradient-to-r from-teal-500 to-cyan-600 border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+          <div id="testimonial" className="bg-emerald-800  border-t-2 md:mb-10  py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
             <div className="md:flex-shrink-0">
               <img
                 className="h-12"
