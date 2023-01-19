@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import StatusPage from "./StatusPage";
 
-export default function CheckoutstatusPage({ user }) {
+export default function CheckoutstatusPage({ user, accept }) {
+  
   const [caregiver, setCaregiver] = useState([]);
   useEffect(() => {
-    fetch(`/caregivers/booked_by_parent/${user.id}`)
-      .then((r) => r.json())
-      .then((data) => {
-        setCaregiver(data);
-      });
-  }, []);
+    const interval=setInterval(async() =>{
+      const response=await fetch(`/caregivers/booked_by_parent/${user.id}`)
+      const updatedData=await response.json();
+      setCaregiver(updatedData);
+    },2000)
+  return()=>clearInterval(interval)
+  }, [accept]);
   
   return (
     <>

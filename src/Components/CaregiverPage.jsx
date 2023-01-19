@@ -3,15 +3,14 @@ import "../Styles/CaregiverPage.css";
 import CaregiverPersonalBoooking from "./CaregiverPersonalBooking";
 function CaregiverPage({ user }) {
   const [bookings, setBookings] = useState([]);
-
   useEffect(() => {
     fetch(`/caregivers/${user.id}/bookings`)
-      .then((r) => r.json())
-      .then((data) => {
-        const trueBookings = data.filter(booking => booking.status === true);
-        setBookings(trueBookings);
-      });
-  }, []);
+      .then((r)=>r.json())
+      .then((data)=>{
+
+        setBookings(data);
+      })
+   }, []);
 
 console.log(bookings)
 // console.log(trueBookings);
