@@ -105,18 +105,6 @@ export default function AvailableNannys() {
                 Remove
               </button>
             </div>
-            <div>
-              <button
-                className="w-1/4 p-1 rounded-md border border-transparent bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                onClick={() => setCard(data.id)}
-              >
-                <small>
-                  <Link to="/cards/card-item">
-                    <small>view more...</small>
-                  </Link>
-                </small>
-              </button>
-            </div>
           </span>
         </div>
       </div>
