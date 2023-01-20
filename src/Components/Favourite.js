@@ -13,7 +13,7 @@ export default function AvailableNannys() {
   console.log(card);
 
   useEffect(() => {
-    fetch(`/favouriteNannys`)
+    fetch(`/favourite`)
       .then((res) => res.json())
       .then((nannyData) => {
         // console.log(nannyData)
@@ -41,7 +41,7 @@ export default function AvailableNannys() {
   }
 
   function HandleDelete(data, setData) {
-    fetch(`http://localhost:3000/favouriteNannys/${data.id}`, {
+    fetch(`/favourite/${data.id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
