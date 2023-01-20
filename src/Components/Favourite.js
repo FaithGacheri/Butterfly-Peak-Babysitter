@@ -9,8 +9,6 @@ export default function AvailableNannys() {
   const [remove, setRemove] = useState(false);
   const [nannyData, setNannyData] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
-  const [card, setCard] = useState(0);
-  console.log(card);
 
   useEffect(() => {
     fetch(`/favourite`)
