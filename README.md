@@ -41,8 +41,7 @@ PostgreSQL - storing database tables
 
 # Setup / Installation Requirements
 
-Backend server : https://Devspedia-API-production.up.railway.app
-Web Browser
+Backend server :
 Internet connection
 
 # Installation Steps
