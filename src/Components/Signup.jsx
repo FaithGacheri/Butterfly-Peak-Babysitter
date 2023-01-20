@@ -28,7 +28,7 @@ export default function Signup({ onLogin }) {
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
-    fetch("/signup_parent", {
+    fetch("https://bbcare.onrender.com/signup_parent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

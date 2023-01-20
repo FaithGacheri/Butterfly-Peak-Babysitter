@@ -30,7 +30,7 @@ function App() {
   const [accept, setAccept] = useState(false)
   useEffect(() => {
     // auto-login
-    fetch("/parent").then((r) => {
+    fetch("https://bbcare.onrender.com/parent").then((r) => {
       if (r.ok) {
         r.json().then((user) => {
           console.log(user)
@@ -40,7 +40,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch(`/caregivers`)
+    fetch(`https://bbcare.onrender.com/caregivers`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -49,7 +49,7 @@ function App() {
   }, []);
   useEffect(() => {
     // auto-login
-    fetch("/caregiver").then((r) => {
+    fetch("https://bbcare.onrender.com/caregiver").then((r) => {
       if (r.ok) {
         r.json().then((caregiver) => {
           setCaregiver(caregiver)});

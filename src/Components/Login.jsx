@@ -27,7 +27,7 @@ export default function Login({ setUser,setCaregiver }) {
     if (result.credential) {
       const params = { token: result.credential };
       axios
-        .post("http://localhost:3000/parent_login/google", params)
+        .post("https://bbcare.onrender.com/parent_login/google", params)
        .then((r) => {
         // if (r.ok) {
           console.log(r.data)
@@ -78,7 +78,7 @@ useEffect(() => {
 
     if (checkbox) {
       setError([]);
-      fetch("/caregiver_login", {
+      fetch("https://bbcare.onrender.com/caregiver_login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -100,7 +100,7 @@ useEffect(() => {
       });
     } else {
       setError([]);
-      fetch("/parent_login", {
+      fetch("https://bbcare.onrender.com/parent_login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

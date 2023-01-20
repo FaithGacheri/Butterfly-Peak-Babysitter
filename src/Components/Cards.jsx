@@ -8,7 +8,7 @@ export default function Cards() {
   const [searchData, setSearchData] = useState("");
 
   useEffect(() => {
-    fetch("/caregivers")
+    fetch("https://bbcare.onrender.com/caregivers")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

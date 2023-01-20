@@ -13,7 +13,7 @@ export default function AvailableNannys() {
   console.log(card);
 
   useEffect(() => {
-    fetch(`/favouriteNannys`)
+    fetch(`https://bbcare.onrender.com/favouriteNannys`)
       .then((res) => res.json())
       .then((nannyData) => {
         // console.log(nannyData)

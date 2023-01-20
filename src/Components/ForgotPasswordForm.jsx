@@ -8,7 +8,7 @@ export default function ForgotPasswordForm() {
 
   function handlePost(e) {
     e.preventDefault()
-    fetch("/password/forgot_password", {
+    fetch("https://bbcare.onrender.com/password/forgot_password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

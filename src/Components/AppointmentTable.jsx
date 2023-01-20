@@ -14,7 +14,7 @@ export default function AppointmentTable({ user,book,setAccept}) {
   console.log(modal);
   useEffect(() => {
       const interval=setInterval(async() =>{
-        const response=await fetch(`/caregivers/${user.id}/bookings`)
+        const response=await fetch(`https://bbcare.onrender.com/caregivers/${user.id}/bookings`)
         const updatedData=await response.json();
         setBookings(updatedData);
       },1000)

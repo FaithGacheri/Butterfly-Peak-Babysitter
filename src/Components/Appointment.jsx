@@ -12,7 +12,7 @@ function Appointment({person, id, show,setAccept}) {
   // const navigate = useNavigate();
   console.log(enabled)
   function handleToggle(e) {
-    fetch(`/bookings/${id}/toggle`, {
+    fetch(`https://bbcare.onrender.com/bookings/${id}/toggle`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

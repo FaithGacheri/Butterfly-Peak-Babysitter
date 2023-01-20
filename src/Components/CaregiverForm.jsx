@@ -16,7 +16,7 @@ export default function CaregiverForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("/signup_caregiver", {
+    fetch("https://bbcare.onrender.com/signup_caregiver", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

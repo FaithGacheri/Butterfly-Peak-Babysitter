@@ -23,7 +23,7 @@ export default function ResetPasswordForm({setUser, setCaregiver}) {
       setPassword("");
       setPasswordConfirmation("");
     } else {
-      fetch("/password/reset_password", {
+      fetch("https://bbcare.onrender.com/password/reset_password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

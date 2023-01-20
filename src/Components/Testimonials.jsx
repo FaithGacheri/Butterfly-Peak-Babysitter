@@ -3,7 +3,7 @@ export default function Testimonials() {
     <>
       <section className="bg-white m-auto">
         <div className="border-t pb-10 pt-10 mb-10">
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-white text-center sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-500 text-center sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
             Testimonials
           </h1>
           <p className="text-center mt-6 lg:text-4xl font-medium text-gray-900 sm:text-center md:text-xl sm:text-sm sm:p-4">

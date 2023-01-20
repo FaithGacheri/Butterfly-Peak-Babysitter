@@ -54,7 +54,7 @@ export default function Card({ r, nanny, images, status, user, data,location,set
   
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("/bookings", {
+    fetch("https://bbcare.onrender.com/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

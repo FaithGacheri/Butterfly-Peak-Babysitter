@@ -4,7 +4,7 @@ import CaregiverPersonalBoooking from "./CaregiverPersonalBooking";
 function CaregiverPage({ user }) {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
-    fetch(`/caregivers/${user.id}/bookings`)
+    fetch(`https://bbcare.onrender.com/caregivers/${user.id}/bookings`)
       .then((r)=>r.json())
       .then((data)=>{
 

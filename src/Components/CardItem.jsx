@@ -12,7 +12,7 @@ export default function CardItem({ user, data,setBook }) {
 
   console.log(id)
   useEffect(() => {
-    fetch(`/caregivers/${id}`)
+    fetch(`https://bbcare.onrender.com/caregivers/${id}`)
       .then((r) => r.json())
       .then((data) => {
         console.log(data);

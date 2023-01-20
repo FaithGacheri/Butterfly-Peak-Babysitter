@@ -13,7 +13,7 @@ export default function AddNanny() {
         const nanny_data = { name, nannyPrice, gender, nannyLocation, nanny_url}
         event.target.reset();
 
-        fetch('http://localhost:3000/nannyData', {
+        fetch('https://bbcare.onrender.com/nannyData', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(nanny_data)

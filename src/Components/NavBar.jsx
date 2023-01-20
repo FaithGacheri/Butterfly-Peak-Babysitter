@@ -12,7 +12,7 @@ const nav=useNavigate()
 
   function logOut() {
     if (user) {
-      fetch("/logout", {
+      fetch("https://bbcare.onrender.com/logout", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
@@ -24,7 +24,7 @@ const nav=useNavigate()
         }
       })
     } else {
-      fetch("/caregiver/logout", {
+      fetch("https://bbcare.onrender.com/caregiver/logout", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
