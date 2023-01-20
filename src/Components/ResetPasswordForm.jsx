@@ -3,13 +3,17 @@ import { emphasize } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from 'react'
 
-export default function ResetPasswordForm() {
+export default function ResetPasswordForm({setUser, setCaregiver}) {
+
 
   const [password_reset_token, setToken] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [password_confirmation, setPasswordConfirmation] = useState('')
-  const navigate = useNavigate()
+
+  const [errors, setErrors] = useState([]);
+  
+  const navigate = useNavigate();
 
 
   function handlePost(e) {
@@ -30,12 +34,26 @@ export default function ResetPasswordForm() {
           password,
           password_confirmation,
         }),
-      })
-        .then((response) => response.json())
-        .then((response) => {
-          alert(response.alert);
-          navigate("/");
-        });
+      }).then((r)=>{
+        if (r.ok) {
+            r.json().then((data) => {console.log(data)
+              setUser(data)
+              setTimeout(() => {
+                navigate("/cards");
+              }, 1000);
+            }) 
+           
+        } else {
+            r.json().then((err) => setErrors(err.errors))
+        }
+     })} 
+      
+        // .then((response) => response.json())
+        // .then((response) => {
+        //   console.log(response)
+        //   alert(response.alert);
+        //   navigate("/");
+        // });
       //if (request.ok) {
       //       setUser(data)
       //       alert(response.alert)
@@ -45,7 +63,7 @@ export default function ResetPasswordForm() {
       //   navigate("/")
       // }
     }
-  }
+  
 
 
   // function handlePost(e) {

@@ -80,7 +80,7 @@ function App() {
         <Route path="/contact_us" element={<Contact />} />
         <Route path="/login" element={<Login setUser={setUser} setCaregiver={setCaregiver} />} />
         <Route path="/login/forgot_password" element={<ForgotPasswordForm />} />
-        <Route path="/login/reset_password" element={<ResetPasswordForm/>} />
+        <Route path="/login/reset_password" element={<ResetPasswordForm setCaregiver={setCaregiver} setUser={setUser}/>} />
         <Route path="/sign_up" element={<Signup />} />
         <Route exact path="/">
           <Route
