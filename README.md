@@ -46,7 +46,7 @@ Internet connection
 
 # Installation Steps
 
-This App is live, but you can also run it locally; here is the live link:https://butterfly-peak-babysitter-8ere-czgaih2dz-faithgacheri.vercel.app/
+This App is live, but you can also run it locally; here is the live link:https://butterfly-peak-babysitter-iziwpa2q1-faithgacheri.vercel.app/
 
 To run locally, fork and clone the repository to your local machine, then run npm install to add dependencies.
 
