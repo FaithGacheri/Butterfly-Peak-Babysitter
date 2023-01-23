@@ -3,8 +3,9 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import Service from './Service';
 import Testimonials from './Testimonials';
-import Footer from './Footer';
+import img1 from "../Images/image1.webp";
 import Contact from './Contact'
+import Footer from "./Footer";
 function Home() {
   return (
     <div>
@@ -19,7 +20,7 @@ function Home() {
                       className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                     >
                       <span className="rounded-full bg-emerald-800 px-5 py-0.5 text-sm font-semibold leading-10 text-white">
-                        Looking for nanny?
+                        Looking for a nanny?
                       </span>
                       <span className="ml-4 text-sm">
                         Check our Available nannies
@@ -39,7 +40,7 @@ function Home() {
                     </h1>
                     <p className="text-base text-gray-900 sm:text-xl lg:text-lg xl:text-xl">
                       An exemplary baby-sitting service company, we recruit the
-                      best nannies, and at your request, they are avail to your home address as you as possible
+                      best nannies, and as per your request, they are available to your home address..
                     </p>
                     <div className="sm:mt-12 ml-0">
                       <form
@@ -69,7 +70,7 @@ function Home() {
                           </div>
                         </div>
                         <p className="mt-3 text-xl text-gray-900 sm:mt-4">
-                          Register and get 2Day care for free, no credit card
+                          Register and get access to our amazing services, no credit card
                           necessary. By providing your email, you agree to our{" "}
                           <Link to="/services" className="font-medium text-gray-900">
                             terms of service
@@ -90,9 +91,9 @@ function Home() {
                 <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
                   <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                     <img
-                      className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-full lg:max-w-none"
-                      src="https://images.squarespace-cdn.com/content/v1/5a2f40a41f318d38ccf0c819/1593066487695-U1K0I1UIO6IL230ECKKO/Website-Redesign_KidsCarePackV2.0-10.png?format=2500w"
-                      alt=""
+                      className="w-full lg:rounded-xl lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-full lg:max-w-none"
+                      src={img1}
+                      alt="image-cover"
                     />
                   </div>
                 </div>

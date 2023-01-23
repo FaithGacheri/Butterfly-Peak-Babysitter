@@ -98,7 +98,7 @@ const nav=useNavigate()
               {user || caregiver ? (null) : (<div className="hidden md:flex md:items-center md:space-x-6">
                 <Link
                   to="/login"
-                  className="text-base font-medium text-white hover:text-gray-300"
+                  className="text-base font-medium text-gray-900 hover:text-gray-300"
                 >
                   Log in
                 </Link>

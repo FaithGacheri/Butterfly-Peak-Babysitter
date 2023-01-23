@@ -13,7 +13,7 @@ export default function AvailableNannys() {
   console.log(card);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/favouriteNannys`)
+    fetch(`/favouriteNannys`)
       .then((res) => res.json())
       .then((nannyData) => {
         // console.log(nannyData)

@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/Blog.css"
 import {Link} from "react-router-dom"
+import Footer from "./Footer";
 
 function Blog() {
   return (
@@ -43,6 +44,7 @@ function Blog() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
